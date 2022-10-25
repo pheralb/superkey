@@ -1,9 +1,9 @@
 {
-  "name": "docs",
+  "name": "superkey-web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,7 +12,7 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "ui": "*"
+    "superkey": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
