@@ -1,10 +1,10 @@
+> 🚧 **Superkey is under development**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
+
 <div align="center">
 
 <a href="https://superkey.vercel.app/">
 <img src="./web/public/images/banner_gh.jpg" />
 </a>
-
-> 🚧 **Superkey is under development**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
 
 <a href="https://superkey.vercel.app/">Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -117,6 +117,6 @@ git push origin [your-branch]
 
 4. Open a pull request 🚀.
 
-### 🔑 License
+## 🔑 License
 
 - [MIT](https://github.com/pheralb/superkey/blob/main/LICENSE).
