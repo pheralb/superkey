@@ -4,15 +4,15 @@
 <img src="./web/public/images/banner_gh.jpg" />
 </a>
 
-> 🚧 Superkey is under development 🚧
+> 🚧 **Superkey is under development**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
 
 <a href="https://superkey.vercel.app/">Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-install">Install</a>
+<a href="#install">Install</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-contribute">Contribute</a>
+<a href="#-contributing">Contribute</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
@@ -23,7 +23,7 @@
 
 ## 👋 Introduction
 
-**Superkey** is a already stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
+**Superkey** is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
 
 ## 🚀 Getting Started
 
