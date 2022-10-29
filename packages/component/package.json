@@ -14,7 +14,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.3"
+    "@headlessui/react": "1.7.3",
+    "@heroicons/react": "2.0.12"
   },
   "devDependencies": {
     "@types/react": "18.0.23",
