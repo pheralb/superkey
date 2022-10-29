@@ -1,73 +1,122 @@
-# Turborepo starter
+<div align="center">
 
-This is an official npm starter turborepo.
+<a href="https://superkey.vercel.app/">
+<img src="./web/public/images/banner_gh.jpg" />
+</a>
 
-## What's inside?
+> 🚧 Superkey is under development 🚧
 
-This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+<a href="https://superkey.vercel.app/">Website</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="#-install">Install</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="#-contribute">Contribute</a>
 
-### Apps and Packages
+![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
+![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
+![GitHub issues](https://img.shields.io/github/issues/pheralb/superkey)
+![GitHub license](https://img.shields.io/github/license/pheralb/superkey)
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+</div>
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 👋 Introduction
 
-### Utilities
+**Superkey** is a already stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
 
-This turborepo has some additional tools already setup for you:
+## 🚀 Getting Started
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- 🚧 **Superkey is only compatible with React 18.**
 
-### Build
+### Install
 
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm run dev
+```bash
+npm install superkey
 ```
 
-### Remote Caching
+### Usage
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+```tsx
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
+const App = () => {
+  return (
+    <Command open={true}>
+      <CommandInput />
+      <CommandList>
+        <CommandOption value="Option 1">
+          <h1>Option 1</h1>
+          <p>Description</p>
+        </CommandOption>
+        <CommandOption value="Option 2">
+          <h1>Option 1</h1>
+          <p>Description</p>
+        </CommandOption>
+      </CommandList>
+    </Command>
+  );
+};
 ```
-cd my-turborepo
-npx turbo login
+
+## 📚 Props
+
+### Command
+
+| Prop            | Description                                            | Required     |
+| --------------- | ------------------------------------------------------ | ------------ |
+| children        | Inside it uses the input, list and options components. | **Required** |
+| open            | Open or close the command palette.                     | **Required** |
+| commandFunction | Function to be executed when click an option.          | Optional     |
+
+### CommandInput
+
+| Prop        | Description                                     | Required     |
+| ----------- | ----------------------------------------------- | ------------ |
+| placeholder | The placeholder of the search text field.       | Optional     |
+| onChange    | Action when the user types in the search field. | **Required** |
+| searchIcon  | Adds an icon to the search field.               | Optional     |
+| className   | Modifies the styles of the text field.          | Optional     |
+
+### CommandList
+
+| Prop     | Description                    | Required     |
+| -------- | ------------------------------ | ------------ |
+| children | Inside imports CommandOptions. | **Required** |
+
+### CommandOption
+
+| Prop      | Description                                       | Required     |
+| --------- | ------------------------------------------------- | ------------ |
+| value     | Value of each option.                             | **Required** |
+| className | Modifies the styles of the option component.      | Optional     |
+| children  | Inside, the option information will be displayed. | **Required** |
+
+### 🤝 Contributing
+
+1. [Fork](https://github.com/pheralb/superkey/fork) & clone the project:
+
+```bash
+git clone git@github.com:[your-user]/superkey.git
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+2. Install dependencies:
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
+```bash
+cd superkey
+npm install
 ```
-npx turbo link
+
+3. Make your changes, create commits and push to your fork:
+
+```bash
+git add .
+git commit -m "My super changes"
+git push origin [your-branch]
 ```
 
-## Useful Links
+4. Open a pull request 🚀.
 
-Learn more about the power of Turborepo:
+### 🔑 License
 
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+- [MIT](https://github.com/pheralb/superkey/blob/main/LICENSE).
