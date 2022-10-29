@@ -10,7 +10,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "release": "turbo run build --filter=web^... && changeset publish"
+  },
+  "dependencies": {
+    "@changesets/cli": "2.25.1"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
@@ -18,7 +22,7 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "packageManager": "npm@8.5.0"
 }
