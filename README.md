@@ -6,6 +6,8 @@
 <img src="./web/public/images/banner_gh.jpg" />
 </a>
 
+<p></p>
+
 <a href="https://superkey.vercel.app/">Website</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
@@ -92,7 +94,11 @@ const App = () => {
 | className | Modifies the styles of the option component.      | Optional     |
 | children  | Inside, the option information will be displayed. | **Required** |
 
-### 🤝 Contributing
+## 📦 Examples
+
+- [**Nextjs 13 + Typescript + Tailwind CSS**](https://github.com/pheralb/superkey/blob/main/web/src/example/command.tsx).
+
+## 🤝 Contributing
 
 1. [Fork](https://github.com/pheralb/superkey/fork) & clone the project:
 
