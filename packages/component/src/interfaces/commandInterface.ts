@@ -10,7 +10,7 @@ export interface CommandProps {
   children: React.ReactNode;
   open: boolean;
   commandFunction?: (command: CommandData) => void;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 // Command Input =>
