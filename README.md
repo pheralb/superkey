@@ -8,9 +8,9 @@
 
 <p></p>
 
-<a href="https://superkey.vercel.app/">Website</a>
+<a href="https://superkey.vercel.app/">Website (working 😉)</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
+<a href="#-examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#install">Install</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -31,24 +31,24 @@
 
 - 🚧 **Superkey is only compatible with React 18.**
 
-### Install
+### 1. Install dependency:
 
 ```bash
 npm install superkey
 ```
 
-### Import styles
+### 2. Import styles:
 
-```bash
+```ts
 import "superkey/styles.css";
 ```
 
-### Usage
+### 3. How to use:
 
 ```tsx
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
-const App = () => {
+function App() {
   return (
     <Command open={true}>
       <CommandInput />
@@ -64,18 +64,22 @@ const App = () => {
       </CommandList>
     </Command>
   );
-};
+}
 ```
+
+- 🤔 Check examples [here](#-examples).
 
 ## 📚 Props
 
 ### Command
 
-| Prop            | Description                                            | Required     |
-| --------------- | ------------------------------------------------------ | ------------ |
-| children        | Inside it uses the input, list and options components. | **Required** |
-| open            | Open or close the command palette.                     | **Required** |
-| commandFunction | Function to be executed when click an option.          | Optional     |
+| Prop            | Description                                              | Required     |
+| --------------- | -------------------------------------------------------- | ------------ |
+| children        | Inside it uses the input, list and options components.   | **Required** |
+| open            | Open or close the command palette.                       | **Required** |
+| commandFunction | Function to be executed when click an option.            | Optional     |
+| onClose         | Function to be executed when close the command palette.  | Optional     |
+| afterLeave      | Function to be executed after close the command palette. | Optional     |
 
 ### CommandInput
 
@@ -103,6 +107,7 @@ const App = () => {
 ## 📦 Examples
 
 - [**Nextjs 13 + Typescript + Tailwind CSS**](https://github.com/pheralb/superkey/blob/main/web/src/example/command.tsx).
+- [**Vitejs + React 18 + Typescript**](https://github.com/pheralb/superkey/tree/main/examples/with-vite-react-typescript).
 
 ## 🤝 Contributing
 
