@@ -6,11 +6,18 @@ import "../styles/globals.css";
 // Import style from Superkey =>
 import "superkey/styles.css";
 
+// Toaster =>
+import { Toaster } from "react-hot-toast";
+
+// Layout =>
+import Header from "../components/header";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <h1 className="text-red-600">hola</h1>
+      <Header />
       <Component {...pageProps} />
+      <Toaster />
     </>
   );
 }
