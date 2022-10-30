@@ -1,4 +1,4 @@
-> 🚧 **Superkey is under development**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
+> 🚧 **Superkey is under development and is not ready for production**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
 
 <div align="center">
 
