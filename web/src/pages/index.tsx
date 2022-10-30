@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
 interface fruits {
@@ -14,9 +14,21 @@ const Home: NextPage = () => {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
 
-  function openModal() {
-    setOpen(true);
-  }
+  useEffect(() => {
+    function handleKeyDown(event?: KeyboardEvent) {
+      if (event?.key === "k" && (event?.metaKey || event?.ctrlKey)) {
+        event?.preventDefault();
+        setOpen(!open);
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, []);
 
   const fruits = [
     { id: 1, name: "Apple", description: "A red fruit" },
@@ -44,11 +56,11 @@ const Home: NextPage = () => {
   return (
     <div>
       <h1>Welcome</h1>
-      <button type="button" onClick={openModal}>
-        Open dialog
-      </button>
       <Command
         open={open}
+        afterLeave={() => {
+          setQuery("");
+        }}
         commandFunction={(fruit) => {
           setOpen(false);
           router.push(`/${fruit}`);
