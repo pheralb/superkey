@@ -7,10 +7,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "superkey-web",
-    "eslint-config-custom",
-    "tailwind-config",
-    "tsconfig"
-  ]
+  "ignore": ["superkey-web"]
 }
