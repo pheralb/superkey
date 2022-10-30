@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build --filter=superkey
+        run: npm run build --w=superkey
       - name: Build & Publish Package
         id: changesets
         uses: changesets/action@v1
