@@ -11,6 +11,7 @@ export interface CommandProps {
   open: boolean;
   commandFunction?: (command: CommandData) => void;
   onClose?: () => void;
+  afterLeave?: () => void;
 }
 
 // Command Input =>
