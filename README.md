@@ -2,19 +2,21 @@
 
 <div align="center">
 
-<a href="https://superkey.vercel.app/">
+<a href="#">
 <img src="./web/public/images/banner_gh.jpg" />
 </a>
 
 <p></p>
 
-<a href="https://superkey.vercel.app/">Website (working 😉)</a>
+<a href="#">Website (working 😊)</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#install">Install</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-contributing">Contribute</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="#-roadmap">Roadmap</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
@@ -103,6 +105,13 @@ function App() {
 | value     | Value of each option.                             | **Required** |
 | className | Modifies the styles of the option component.      | Optional     |
 | children  | Inside, the option information will be displayed. | **Required** |
+
+## 🗒️ Roadmap
+
+- [ ] Improve light & dark mode.
+- [ ] Add dark mode.
+- [ ] Add more examples (using Remix).
+- [ ] Create website.
 
 ## 📦 Examples
 
