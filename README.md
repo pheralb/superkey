@@ -37,6 +37,12 @@
 npm install superkey
 ```
 
+### Import styles
+
+```bash
+import "superkey/styles.css";
+```
+
 ### Usage
 
 ```tsx
