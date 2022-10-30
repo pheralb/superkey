@@ -11,7 +11,7 @@ export const CommandInput = (props: CommandInputProps) => {
         className={
           props.className
             ? props.className
-            : "text-gray-600 w-full h-12 pl-2  bg-transparent border-none focus:outline-none"
+            : "text-gray-600 w-full h-10 pl-2  bg-transparent border-none focus:outline-none"
         }
         placeholder={
           props.placeholder ? props.placeholder : "Type a command or search..."
