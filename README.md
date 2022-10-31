@@ -10,9 +10,9 @@
 
 <a href="#">Website (working 😊)</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-examples">Examples</a>
+<a href="#-getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#install">Install</a>
+<a href="#-examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-contributing">Contribute</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -87,11 +87,13 @@ function App() {
 
 ### CommandInput
 
-| -   | Prop          | Description                                     | Type         |
-| --- | ------------- | ----------------------------------------------- | ------------ |
-| ⚙️  | `onChange`    | Action when the user types in the search field. | **Required** |
-| ⚙️  | `placeholder` | The placeholder of the search text field.       | Optional     |
-| 🎨  | `searchIcon`  | Adds an icon to the search field.               | Optional     |
+| -   | Prop             | Description                                          | Type         |
+| --- | ---------------- | ---------------------------------------------------- | ------------ |
+| ⚙️  | `onChange`       | Action when the user types in the search field.      | **Required** |
+| ⚙️  | `placeholder`    | The placeholder of the search text field.            | Optional     |
+| 🎨  | `searchIcon`     | Adds an icon to the search field.                    | Optional     |
+| 🎨  | `className`      | Class to be added to the all component.              | Optional     |
+| 🎨  | `inputClassName` | Class to be added to the input text field component. | Optional     |
 
 ### CommandList
 
