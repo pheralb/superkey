@@ -10,7 +10,11 @@ export const Command = (props: CommandProps) => {
   }
 
   return (
-    <Transition.Root show={props.open} as={Fragment} afterLeave={props.afterLeave}>
+    <Transition.Root
+      show={props.open}
+      as={Fragment}
+      afterLeave={props.afterLeave}
+    >
       <Dialog
         onClose={() => {
           props.onClose ? props.onClose() : closeModal();
@@ -25,7 +29,11 @@ export const Command = (props: CommandProps) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Dialog.Overlay className="fixed inset-0 bg-gray-200/40" />
+          <Dialog.Overlay
+            className={`fixed inset-0 ${
+              props.overlayClassName ? props.overlayClassName : "bg-gray-200/40"
+            }`}
+          />
         </Transition.Child>
         <Transition.Child
           enter="ease-out duration-300"
@@ -38,7 +46,9 @@ export const Command = (props: CommandProps) => {
           <Combobox
             as="div"
             onChange={props.commandFunction}
-            className="relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1 ring-black/5"
+            className={`relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1 ${
+              props.className ? props.className : "bg-white ring-black/5"
+            }`}
           >
             {props.children}
           </Combobox>

@@ -3,16 +3,18 @@ import { CommandInputProps } from "./interfaces/commandInterface";
 
 export const CommandInput = (props: CommandInputProps) => {
   return (
-    <div className="flex items-center p-2 border-b border-gray-200">
+    <div
+      className={`flex items-center p-2 space-x-2 ${
+        props.className ? props.className : "border-b border-gray-200"
+      }`}
+    >
       {props.searchIcon}
       <Combobox.Input
         as="input"
         onChange={props.onChange}
-        className={
-          props.className
-            ? props.className
-            : "text-gray-600 w-full h-10 pl-2  bg-transparent border-none focus:outline-none"
-        }
+        className={`w-full h-10 pl-2 bg-transparent border-none focus:outline-none ${
+          props.inputClassName ? props.inputClassName : "text-gray-600"
+        }`}
         placeholder={
           props.placeholder ? props.placeholder : "Type a command or search..."
         }
