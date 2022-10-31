@@ -10,6 +10,7 @@ pnpm-lock.yaml
 coverage
 
 # Next.js =>
+.vscode
 .next/
 out/
 build
