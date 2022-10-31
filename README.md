@@ -75,36 +75,37 @@ function App() {
 
 ### Command
 
-| Prop            | Description                                              | Required     |
-| --------------- | -------------------------------------------------------- | ------------ |
-| children        | Inside it uses the input, list and options components.   | **Required** |
-| open            | Open or close the command palette.                       | **Required** |
-| commandFunction | Function to be executed when click an option.            | Optional     |
-| onClose         | Function to be executed when close the command palette.  | Optional     |
-| afterLeave      | Function to be executed after close the command palette. | Optional     |
+| -   | Prop               | Description                                              | Type         |
+| --- | ------------------ | -------------------------------------------------------- | ------------ |
+| ⚙️  | `children`         | Inside it uses the input, list and options components.   | **Required** |
+| ⚙️  | `open`             | Open or close the command palette.                       | **Required** |
+| ⚙️  | `commandFunction`  | Function to be executed when click an option.            | Optional     |
+| ⚙️  | `onClose`          | Function to be executed when close the command palette.  | Optional     |
+| ⚙️  | `afterLeave`       | Function to be executed after close the command palette. | Optional     |
+| 🎨  | `className`        | Class to be added to the command palette.                | Optional     |
+| 🎨  | `overlayClassName` | Class to be added to the overlay.                        | Optional     |
 
 ### CommandInput
 
-| Prop        | Description                                     | Required     |
-| ----------- | ----------------------------------------------- | ------------ |
-| placeholder | The placeholder of the search text field.       | Optional     |
-| onChange    | Action when the user types in the search field. | **Required** |
-| searchIcon  | Adds an icon to the search field.               | Optional     |
-| className   | Modifies the styles of the text field.          | Optional     |
+| -   | Prop          | Description                                     | Type         |
+| --- | ------------- | ----------------------------------------------- | ------------ |
+| ⚙️  | `onChange`    | Action when the user types in the search field. | **Required** |
+| ⚙️  | `placeholder` | The placeholder of the search text field.       | Optional     |
+| 🎨  | `searchIcon`  | Adds an icon to the search field.               | Optional     |
 
 ### CommandList
 
-| Prop     | Description                    | Required     |
-| -------- | ------------------------------ | ------------ |
-| children | Inside imports CommandOptions. | **Required** |
+| -   | Prop       | Description                    | Type         |
+| --- | ---------- | ------------------------------ | ------------ |
+| ⚙️  | `children` | Inside imports CommandOptions. | **Required** |
 
 ### CommandOption
 
-| Prop      | Description                                       | Required     |
-| --------- | ------------------------------------------------- | ------------ |
-| value     | Value of each option.                             | **Required** |
-| className | Modifies the styles of the option component.      | Optional     |
-| children  | Inside, the option information will be displayed. | **Required** |
+| -   | Prop        | Description                                       | Type         |
+| --- | ----------- | ------------------------------------------------- | ------------ |
+| ⚙️  | `value`     | Value of each option.                             | **Required** |
+| ⚙️  | `children`  | Inside, the option information will be displayed. | **Required** |
+| 🎨  | `className` | Modifies the styles of the option component.      | Optional     |
 
 ## 🗒️ Roadmap
 
