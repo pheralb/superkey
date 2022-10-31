@@ -31,7 +31,7 @@ export const Command = (props: CommandProps) => {
         >
           <Dialog.Overlay
             className={`fixed inset-0 ${
-              props.overlayClassName ? props.overlayClassName : "bg-gray-200/40"
+              props.overlayClassName ? props.overlayClassName : "bg-gray-200/40 dark:bg-zinc-800/40"
             }`}
           />
         </Transition.Child>
@@ -47,7 +47,7 @@ export const Command = (props: CommandProps) => {
             as="div"
             onChange={props.commandFunction}
             className={`relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1 ${
-              props.className ? props.className : "bg-white ring-black/5"
+              props.className ? props.className : "bg-white ring-black/5 dark:bg-zinc-900 dark:ring-zinc-900/5"
             }`}
           >
             {props.children}

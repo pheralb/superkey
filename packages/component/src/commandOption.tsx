@@ -7,7 +7,7 @@ export const CommandOption = (props: CommandOptionProps) => {
       {({ active }) => (
         <div
           className={`space-x-1 px-4 py-2 cursor-pointer ${
-            active ? "bg-gray-200" : "bg-transparent"
+            active ? "bg-gray-200 dark:bg-zinc-800" : "bg-transparent"
           }`}
         >
           {props.children}
