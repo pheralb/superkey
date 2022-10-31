@@ -1,6 +1,8 @@
 {
   "name": "superkey",
-  "version": "0.1.0-rc.2",
+  "version": "0.1.0-rc.3",
+  "author": "@pheralb_",
+  "description": "A stylized command menu for React.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
