@@ -3,12 +3,15 @@ export interface CommandData {
   name: string;
   description: string;
   url?: string;
+  
 }
 
 // Global Command Props =>
 export interface CommandProps {
   children: React.ReactNode;
   open: boolean;
+  className?: string;
+  overlayClassName?: string;
   commandFunction?: (command: CommandData) => void;
   onClose?: () => void;
   afterLeave?: () => void;
@@ -20,6 +23,7 @@ export interface CommandInputProps {
   onChange(event: React.ChangeEvent<HTMLInputElement>): void;
   searchIcon?: React.ReactNode;
   className?: string;
+  inputClassName?: string;
 }
 
 // Command Option =>
