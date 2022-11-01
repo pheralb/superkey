@@ -1,0 +1,40 @@
+---
+title: Getting Started
+description: Install Superkey in your project.
+---
+
+### 1. Install dependency:
+
+```bash
+npm install superkey
+```
+
+### 2. Import styles:
+
+```ts
+import "superkey/styles.css";
+```
+
+### 3. How to use:
+
+```tsx
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+function App() {
+  return (
+    <Command open={true}>
+      <CommandInput />
+      <CommandList>
+        <CommandOption value="Option 1">
+          <h1>Option 1</h1>
+          <p>Description</p>
+        </CommandOption>
+        <CommandOption value="Option 2">
+          <h1>Option 1</h1>
+          <p>Description</p>
+        </CommandOption>
+      </CommandList>
+    </Command>
+  );
+}
+```
