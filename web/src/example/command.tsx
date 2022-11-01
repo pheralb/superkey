@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 // Your json data =>
-import { fruits } from "./data";
+import { exampleData } from "./data";
 
 const CommandExample = () => {
   const [query, setQuery] = useState("");
@@ -28,10 +28,10 @@ const CommandExample = () => {
 
   // Filter fruits =>
   const filteredFruits = query
-    ? fruits.filter((fruit) =>
-        fruit.name.toLowerCase().includes(query.toLowerCase())
+    ? exampleData.filter((example) =>
+        example.name.toLowerCase().includes(query.toLowerCase())
       )
-    : fruits;
+    : exampleData;
 
   return (
     <Command
@@ -50,10 +50,15 @@ const CommandExample = () => {
         }}
       />
       <CommandList>
-        {filteredFruits.map((fruit) => (
-          <CommandOption key={fruit.id} value={fruit.name}>
-            <h1>{fruit.name}</h1>
-            <p className="text-gray-500">{fruit.description}</p>
+        {filteredFruits.map((example) => (
+          <CommandOption key={example.id} value={example.name} className="bg-red-500">
+            <div className="flex items-center space-x-2">
+              <div className="flex-shrink-0 icon-size-8">{example.icon}</div>
+              <h1>{example.name}</h1>
+            </div>
+            <div>
+              <p className="text-sm text-gray-400">{example.command}</p>
+            </div>
           </CommandOption>
         ))}
       </CommandList>
