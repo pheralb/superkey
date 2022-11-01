@@ -6,8 +6,8 @@ export const CommandOption = (props: CommandOptionProps) => {
     <Combobox.Option value={props.value}>
       {({ active }) => (
         <div
-          className={`space-x-1 px-4 py-2 cursor-pointer ${
-            active ? "bg-gray-200 dark:bg-zinc-800" : "bg-transparent"
+          className={`flex flex-row items-center justify-between w-full px-4 py-3 text-gray-900 ${
+            active ? "bg-gray-100 dark:bg-zinc-700" : ""
           }`}
         >
           {props.children}
