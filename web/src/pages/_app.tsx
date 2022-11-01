@@ -11,14 +11,15 @@ import { Toaster } from "react-hot-toast";
 
 // Layout =>
 import Header from "../components/header";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider attribute="class">
       <Header />
       <Component {...pageProps} />
       <Toaster />
-    </>
+    </ThemeProvider>
   );
 }
 
