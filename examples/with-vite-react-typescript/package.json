@@ -12,7 +12,7 @@
     "@react-symbols/icons": "1.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "superkey": "0.1.0-rc.2"
+    "superkey": "0.1.0-rc.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",
