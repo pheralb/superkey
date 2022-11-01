@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-symbols/icons": "1.1.2",
+    "gray-matter": "4.0.3",
     "next": "13.0.0",
+    "next-mdx-remote": "4.1.0",
+    "next-themes": "0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.0",
+    "react-icons": "4.6.0",
     "superkey": "*"
   },
   "devDependencies": {
     "@babel/core": "7.19.6",
+    "@tailwindcss/typography": "0.5.7",
     "@types/node": "18.11.5",
     "@types/react": "18.0.23",
     "autoprefixer": "10.4.12",
