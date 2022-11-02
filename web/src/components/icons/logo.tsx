@@ -6,7 +6,7 @@ const Logo = (props: ComponentProps<"svg">) => {
       <path fill="none" d="M0 0h256v256H0z"></path>
       <path
         fill="none"
-        stroke="#3c00ff"
+        stroke="#959494"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="12"

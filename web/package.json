@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-symbols/icons": "1.1.2",
+    "framer-motion": "7.6.4",
     "gray-matter": "4.0.3",
     "next": "13.0.0",
     "next-mdx-remote": "4.1.0",
@@ -18,6 +19,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.0",
     "react-icons": "4.6.0",
+    "rehype-prism-plus": "1.5.0",
     "superkey": "*"
   },
   "devDependencies": {

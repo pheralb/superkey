@@ -54,7 +54,7 @@ const CommandExample = () => {
           <CommandOption key={example.id} value={example.name} className="bg-red-500">
             <div className="flex items-center space-x-2">
               <div className="flex-shrink-0 icon-size-8">{example.icon}</div>
-              <h1>{example.name}</h1>
+              <h1 className="text-gray-100">{example.name}</h1>
             </div>
             <div>
               <p className="text-sm text-gray-400">{example.command}</p>

@@ -9,10 +9,26 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        gtw: ["Gt-Walsheim", "sans-serif"],
       },
       fontSize: {
         mini: "15px",
       },
+      colors: {
+        darkNight: "#121212",
+      },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            pre: null,
+            code: null,
+            "code::before": null,
+            "code::after": null,
+            "pre code::before": null,
+            "pre code::after": null,
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],

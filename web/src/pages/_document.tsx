@@ -6,13 +6,27 @@ export default function Document() {
       <Head>
         <link
           rel="preload"
-          href="/inter-var-latin.woff2"
+          href="/fonts/inter-var-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/cascadia-code.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/gt-walsheim.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
       </Head>
-      <body className="font-sans bg-white text-dark text-mini dark:bg-black dark:text-white">
+      <body className="font-sans bg-white text-dark text-mini dark:bg-darkNight dark:text-white">
         <Main />
         <NextScript />
       </body>
