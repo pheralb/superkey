@@ -75,7 +75,7 @@ function App() {
 
 ### Command
 
-| -   | Prop               | Description                                              | Type         |
+| -   | Prop               | Description                                              | Required     |
 | --- | ------------------ | -------------------------------------------------------- | ------------ |
 | ⚙️  | `children`         | Inside it uses the input, list and options components.   | **Required** |
 | ⚙️  | `open`             | Open or close the command palette.                       | **Required** |
