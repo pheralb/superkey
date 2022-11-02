@@ -9,3 +9,19 @@
   font-weight: 400 900;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "CascadiaCode";
+  src: url("/fonts/cascadia-code.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gt-Walsheim";
+  src: url("/fonts/gt-walsheim.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
