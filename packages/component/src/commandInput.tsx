@@ -4,7 +4,7 @@ import { CommandInputProps } from "./interfaces/commandInterface";
 export const CommandInput = (props: CommandInputProps) => {
   return (
     <div
-      className={`flex items-center p-2 space-x-2 shadow-md ${
+      className={`flex items-center p-2 space-x-2 ${
         props.className ? props.className : "border-b border-gray-200 dark:border-zinc-800"
       }`}
     >
