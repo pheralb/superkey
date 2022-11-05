@@ -52,7 +52,7 @@ const CommandExample = () => {
       <CommandList>
         {filteredFruits.map((fruit) => (
           <CommandOption key={fruit.id} value={fruit.name}>
-            <h1>{fruit.name}</h1>
+            <h5>{fruit.name}</h5>
             <p className="text-gray-500">{fruit.description}</p>
           </CommandOption>
         ))}
