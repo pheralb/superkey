@@ -1,46 +1,42 @@
-import { BiSearch, BiPlus, BiGroup, BiBookOpen, BiMessageSquare, BiMailSend, BiMoon } from "react-icons/bi";
+import {
+  BiSearch,
+  BiPlus,
+  BiGroup,
+  BiBookOpen,
+  BiMessageSquare,
+  BiMailSend,
+  BiMoon,
+  BiBookmarkAlt,
+} from "react-icons/bi";
+import { BsBox, BsGithub, BsTwitter } from "react-icons/bs";
 
 export const exampleData = [
   {
     id: 1,
-    name: "Search Projects",
-    icon: <BiSearch size={18} />,
-    command: "search",
+    name: "Getting Started",
+    icon: <BiBookOpen size={18} />,
+    command: "docs",
+    slug: "/docs/getting-started",
   },
   {
     id: 2,
-    name: "Create New Project",
-    icon: <BiPlus size={18} />,
-    command: "create",
+    name: "Examples",
+    icon: <BiBookmarkAlt size={18} />,
+    command: "examples",
+    slug: "/examples",
   },
   {
     id: 3,
-    name: "Search Teams",
-    icon: <BiGroup size={18} />,
-    command: "teams",
+    name: "Github",
+    icon: <BsGithub size={18} />,
+    command: "github",
+    slug: "https://github.com/pheralb/superkey",
   },
   {
     id: 4,
-    name: "Docs",
-    icon: <BiBookOpen size={18} />,
-    command: "docs",
+    name: "Twitter",
+    icon: <BsTwitter size={18} />,
+    command: "twitter",
+    slug: "https://twitter.com/pheralb_",
   },
-  {
-    id: 5,
-    name: "Send feedback",
-    icon: <BiMessageSquare size={18} />,
-    command: "feedback",
-  },
-  {
-    id: 6,
-    name: "Contact support",
-    icon: <BiMailSend size={18} />,
-    command: "support",
-  },
-  {
-    id: 7,
-    name: "Change theme",
-    icon: <BiMoon size={18} />,
-    command: "theme",
-  }
 ];
