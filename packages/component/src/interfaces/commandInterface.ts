@@ -3,7 +3,6 @@ export interface CommandData {
   name: string;
   description: string;
   url?: string;
-  
 }
 
 // Global Command Props =>
