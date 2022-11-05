@@ -9,7 +9,9 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "turbo run build --filter=web^... && changeset publish"
+    "preview-pkg": "turbo run build --filter=superkey",
+    "release": "turbo run build --filter=superkey && changeset publish",
+    "clean": "npx rimraf ./**/dist"
   },
   "dependencies": {
     "@changesets/cli": "2.25.1"
