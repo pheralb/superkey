@@ -1,5 +1,26 @@
 {
-  "extends": "tsconfig/react-library.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Superkey",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["ES2015"],
+    "module": "ESNext",
+    "target": "es6",
+    "outDir": "build"
+  },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
