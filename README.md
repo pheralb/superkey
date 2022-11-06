@@ -1,3 +1,5 @@
+> **Warning**: Superkey is under development and **is not ready for production**.
+
 <div align="center">
 
 <a href="#">
@@ -20,8 +22,6 @@
 ![GitHub license](https://img.shields.io/github/license/pheralb/superkey)
 
 </div>
-
-> ⚠️ **Warning**: Superkey is under development and **is not ready for production**.
 
 ## 👋 Introduction
 
