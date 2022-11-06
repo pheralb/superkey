@@ -1,5 +1,3 @@
-> 🚧 **Superkey is under development and is not ready for production**. If you have any bugs or problems please [create an issue](https://github.com/pheralb/superkey/issues/new). 🚧
-
 <div align="center">
 
 <a href="#">
@@ -8,13 +6,11 @@
 
 <p></p>
 
-<a href="#">Website (working 😊)</a>
+<a href="https://superkey.vercel.app/docs/getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-getting-started">Getting Started</a>
+<a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-examples">Examples</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-contributing">Contribute</a>
+<a href="#-getting-started">Contribute</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-roadmap">Roadmap</a>
 
@@ -25,53 +21,73 @@
 
 </div>
 
+> ⚠️ **Warning**: Superkey is under development and **is not ready for production**.
+
 ## 👋 Introduction
 
-**Superkey** is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
+**Superkey** is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project. Works with:
 
-## 🚀 Getting Started
+| <img src="./web/public/images/other/react.svg" height="26px" alt="React"> | <img src="./web/public/images/other/nextjs.svg" height="26px" alt="Nextjs"> | <img src="./web/public/images/other/remix.svg" height="26px" alt="Remix"> | <img src="./web/public/images/other/solidjs.svg" height="26px" alt="Solidjs"> | <img src="./web/public/images/other/preact.svg" height="26px" alt="Preact"> |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [✅ Vitejs + React](https://vitejs.dev/)                                                                   | [✅ Nextjs 13](https://nextjs.org/)                                                                | [🔨 Remix](https://remix.run/)                                                                  | [🔨 Solidjs](https://www.solidjs.com/)                                                                 | [🔨 Preact](https://preactjs.com/)                                                                       |
 
-- 🚧 **Superkey is only compatible with React 18.**
+> 🔨 We are preparing Superkey to support it.
 
-### 1. Install dependency:
+## 🤝 Contributing
+
+### 1. [Fork](https://github.com/pheralb/superkey/fork) and clone the repository:
 
 ```bash
-npm install superkey
+git clone git@github.com:your-username/superkey.git
 ```
 
-### 2. Import styles:
+### 2. Install dependencies:
 
-```ts
-import "superkey/styles.css";
+```bash
+npm install
+# or
+yarn install
+# or
+ultra install
+# or
+pnpm install
 ```
 
-### 3. How to use:
+### 3. Run monorepo:
 
-```tsx
-import { Command, CommandInput, CommandList, CommandOption } from "superkey";
-
-function App() {
-  return (
-    <Command open={true}>
-      <CommandInput />
-      <CommandList>
-        <CommandOption value="Option 1">
-          <h1>Option 1</h1>
-          <p>Description</p>
-        </CommandOption>
-        <CommandOption value="Option 2">
-          <h1>Option 1</h1>
-          <p>Description</p>
-        </CommandOption>
-      </CommandList>
-    </Command>
-  );
-}
+```bash
+npm run dev
+# or
+yarn dev
+# or
+ultra dev
+# or
+pnpm dev
 ```
 
-- 🤔 Check examples [here](#-examples).
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see app.
 
-## 📚 Props
+## 📦 Monorepo structure:
+
+### Examples:
+
+- A list with examples of how to use Superkey.
+
+### Packages:
+
+- `component` : The Superkey component. Using [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/).
+
+- `eslint-config-custom` : Shared ESLint configuration for Superkey.
+
+- `tailwind-config` : Shared Tailwind CSS configuration for Superkey.
+
+- `tsconfig` : Shared TypeScript configuration for Superkey.
+
+### Web
+
+- `Superkey website + documentation` : Built with Nextjs & next-mdx-remote.
+
+## 📚 Components props
 
 ### Command
 
@@ -108,43 +124,6 @@ function App() {
 | ⚙️  | `value`     | Value of each option.                             | **Required** |
 | ⚙️  | `children`  | Inside, the option information will be displayed. | **Required** |
 | 🎨  | `className` | Modifies the styles of the option component.      | Optional     |
-
-## 🗒️ Roadmap
-
-- [ ] Improve light & dark mode.
-- [ ] Add dark mode.
-- [ ] Add more examples (using Remix).
-- [ ] Create website.
-
-## 📦 Examples
-
-- [**Nextjs 13 + Typescript + Tailwind CSS**](https://github.com/pheralb/superkey/blob/main/web/src/example/command.tsx).
-- [**Vitejs + React 18 + Typescript**](https://github.com/pheralb/superkey/tree/main/examples/with-vite-react-typescript).
-
-## 🤝 Contributing
-
-1. [Fork](https://github.com/pheralb/superkey/fork) & clone the project:
-
-```bash
-git clone git@github.com:[your-user]/superkey.git
-```
-
-2. Install dependencies:
-
-```bash
-cd superkey
-npm install
-```
-
-3. Make your changes, create commits and push to your fork:
-
-```bash
-git add .
-git commit -m "My super changes"
-git push origin [your-branch]
-```
-
-4. Open a pull request 🚀.
 
 ## 🔑 License
 
