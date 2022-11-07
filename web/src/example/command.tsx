@@ -38,6 +38,7 @@ const CommandExample = () => {
   return (
     <Command
       open={open}
+      onClose={() => setOpen(false)}
       afterLeave={() => {
         setQuery("");
       }}
@@ -53,13 +54,14 @@ const CommandExample = () => {
       />
       <CommandList>
         {filteredData.map((example) => (
-          <CommandOption key={example.id} value={example.slug} className="bg-red-500">
-            <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 icon-size-8">{example.icon}</div>
+          <CommandOption
+            key={example.id}
+            value={example.slug}
+            activeClassName="bg-gray-100 dark:bg-zinc-800"
+          >
+            <div className="flex items-center justify-between p-2">
+              <div className="mr-2 icon-size-8">{example.icon}</div>
               <h1 className="text-gray-100">{example.name}</h1>
-            </div>
-            <div>
-              <p className="text-sm text-gray-400">{example.command}</p>
             </div>
           </CommandOption>
         ))}

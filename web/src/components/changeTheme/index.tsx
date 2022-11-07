@@ -8,7 +8,7 @@ const ChangeTheme = () => {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="transition-all hover:-translate-y-0.5"
     >
-      {theme === "dark" ? <BiSun size={22} /> : <BiMoon size={22} />}
+      {theme === "dark" ? <BiSun size={20} /> : <BiMoon size={20} />}
     </button>
   );
 };
