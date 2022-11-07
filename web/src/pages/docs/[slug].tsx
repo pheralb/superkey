@@ -8,7 +8,12 @@ import { useRouter } from "next/router";
 import SidebarSection from "../../components/docs/sidebarSection";
 
 // Docs data =>
-import { Components, Examples, GettingStarted } from "../../data/docs";
+import {
+  Components,
+  Examples,
+  FrameworksGuides,
+  GettingStarted,
+} from "../../data/docs";
 
 // Next-MDX-Remote =>
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -16,8 +21,10 @@ import { serialize } from "next-mdx-remote/serialize";
 
 // Plugins =>
 import rehypePrism from "rehype-prism-plus";
-import { BiLinkExternal } from "react-icons/bi";
+import { BiBookAlt, BiLinkExternal } from "react-icons/bi";
 import Head from "next/head";
+import { BsGithub } from "react-icons/bs";
+import MenuMobile from "../../components/docs/menuMobile";
 
 export type DocsType = {
   title: string;
@@ -36,13 +43,19 @@ export default function Docs({ source, frontMatter }: DocsProps) {
   return (
     <>
       <Head>
-        <title>{frontMatter.title}</title>
+        <title>{frontMatter.title} - Superkey</title>
       </Head>
+      <div className="w-full pb-2 mt-2 md:hidden">
+        <MenuMobile />
+      </div>
       <div className="flex flex-col items-center justify-center mb-5">
         <div className="container mx-auto">
-          <div className="fixed h-full pb-10 overflow-x-hidden overflow-y-auto border-r border-gray-100 dark:border-zinc-800 w-60">
+          <div className="hidden pb-10 overflow-x-hidden overflow-y-auto border-r border-gray-100 md:h-full md:fixed dark:border-zinc-800 w-60 md:block">
             <div className="py-5">
-              <SidebarSection title="🚀 Introduction">
+              <SidebarSection
+                title="Introduction"
+                icon={<BiBookAlt size={14} />}
+              >
                 {GettingStarted.map((item) => (
                   <div
                     key={item.path}
@@ -56,7 +69,25 @@ export default function Docs({ source, frontMatter }: DocsProps) {
                   </div>
                 ))}
               </SidebarSection>
-              <SidebarSection title="📦 Components">
+              <SidebarSection
+                title="Frameworks guides"
+                icon={<BiBookAlt size={14} />}
+              >
+                {FrameworksGuides.map((item) => (
+                  <div className="mb-3" key={item.path}>
+                    <div
+                      className={`hover:underline ${
+                        `/docs/${slug}` === item.path
+                          ? "text-black dark:text-gray-200 font-bold"
+                          : "text-gray-500 dark:text-gray-400"
+                      }`}
+                    >
+                      <Link href={`${item.path}`}>{item.title}</Link>
+                    </div>
+                  </div>
+                ))}
+              </SidebarSection>
+              <SidebarSection title="Components" icon={<BiBookAlt size={14} />}>
                 {Components.map((item) => (
                   <div className="mb-3" key={item.path}>
                     <div
@@ -71,7 +102,7 @@ export default function Docs({ source, frontMatter }: DocsProps) {
                   </div>
                 ))}
               </SidebarSection>
-              <SidebarSection title="🤔 Examples">
+              <SidebarSection title="Examples" icon={<BsGithub size={14} />}>
                 {Examples.map((item) => (
                   <div className="hover:underline" key={item.path}>
                     <div className="flex items-center mb-2">
@@ -81,13 +112,10 @@ export default function Docs({ source, frontMatter }: DocsProps) {
                   </div>
                 ))}
               </SidebarSection>
-              <SidebarSection title="🎨 Guides">
-                <p>Soon 😉</p>
-              </SidebarSection>
             </div>
           </div>
 
-          <div className="mt-2 ml-72">
+          <div className="pl-5 pr-5 mt-2 md:pl-0 md:pr-0 md:ml-72">
             <div className="pt-6 pb-6 mb-6 border-b border-gray-100 dark:border-zinc-800 font-gtw">
               <h1 className="mb-1 text-4xl font-medium">{frontMatter.title}</h1>
               <p className="text-gray-500">{frontMatter.description}</p>

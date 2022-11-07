@@ -1,4 +1,6 @@
 import type { AppProps } from "next/app";
+import { DefaultSeo } from "next-seo";
+import nextSeoConfig from "../../next-seo.config";
 
 // Styles =>
 import "../styles/globals.css";
@@ -23,6 +25,7 @@ import CommandExample from "../example/command";
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider attribute="class">
+      <DefaultSeo {...nextSeoConfig} />
       <Header />
       <motion.div
         key={router.route}
