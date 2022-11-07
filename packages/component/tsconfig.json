@@ -16,11 +16,11 @@
     "skipLibCheck": true,
     "strict": true,
     "jsx": "react-jsx",
-    "lib": ["ES2015"],
+    "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
     "module": "ESNext",
     "target": "es6",
-    "outDir": "build"
+    "outDir": "dist"
   },
-  "include": ["."],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["dist", "build", "node_modules"]
 }
