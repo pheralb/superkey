@@ -12,7 +12,7 @@ export interface CommandProps {
   className?: string;
   overlayClassName?: string;
   commandFunction?: (command: CommandData) => void;
-  onClose?: () => void;
+  onClose: (value: boolean) => void;
   afterLeave?: () => void;
 }
 
@@ -29,6 +29,7 @@ export interface CommandInputProps {
 export interface CommandOptionProps {
   value: string;
   className?: string;
+  activeClassName?: string;
   children: React.ReactNode;
 }
 

@@ -1,7 +1,7 @@
 import { Combobox } from "@headlessui/react";
-import { CommandInputProps } from "./interfaces/commandInterface";
+import { CommandInputProps } from "../interfaces/commandInterface";
 
-export const CommandInput = (props: CommandInputProps) => {
+const CommandInput = (props: CommandInputProps) => {
   return (
     <div
       className={`flex items-center p-2 space-x-2 ${
@@ -22,3 +22,5 @@ export const CommandInput = (props: CommandInputProps) => {
     </div>
   );
 };
+
+export default CommandInput;

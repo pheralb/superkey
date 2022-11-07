@@ -1,14 +1,8 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
-import { CommandProps } from "./interfaces/commandInterface";
+import { CommandProps } from "../interfaces/commandInterface";
 
-export const Command = (props: CommandProps) => {
-  const [isOpen, setisOpen] = useState(props.open);
-
-  function closeModal() {
-    setisOpen(false);
-  }
-
+const Command = (props: CommandProps) => {
   return (
     <Transition.Root
       show={props.open}
@@ -16,9 +10,7 @@ export const Command = (props: CommandProps) => {
       afterLeave={props.afterLeave}
     >
       <Dialog
-        onClose={() => {
-          props.onClose ? props.onClose() : closeModal();
-        }}
+        onClose={props.onClose}
         className="fixed inset-0 p-5 pt-[25vh] overflow-y-auto"
       >
         <Transition.Child
@@ -57,3 +49,5 @@ export const Command = (props: CommandProps) => {
     </Transition.Root>
   );
 };
+
+export default Command;
