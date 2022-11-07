@@ -3,20 +3,20 @@ title: Getting Started
 description: Install Superkey in your project.
 ---
 
-**👋 Welcome to Superkey!**
+**👋 Welcome**
 
 Superkey is a stylized command palette component built with React, Tailwind CSS & HeadlessUI ready to be used in your next project.
 
-### 1. Install dependency:
+### 1. Install:
 
-🚧 Superkey only works with React 18 or higher.
+🚧 Superkey only works with React 18 or higher. It also requires [headlessUI](https://headlessui.com/) to be installed.
 
 ```bash
-npm install superkey
+npm install superkey @headlessui/react
 # or
-yarn add superkey
-# or
-pnpm install superkey
+yarn add superkey @headlessui/react
+# or 
+pnpm install superkey @headlessui/react
 ```
 
 ### 2. Import styles:
@@ -27,7 +27,7 @@ import "superkey/styles.css";
 
 ### 3. How to use:
 
-```jsx
+```jsx {5-19}
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
 function App() {
