@@ -1,0 +1,132 @@
+---
+title: Set up Superkey in Remix
+description: Install Superkey in Remix + Typescript.
+---
+
+### 1. Create a new Remix project:
+
+```bash {1}
+npx create-remix@latest
+cd my-app
+```
+
+### 2. Install Superkey:
+
+```bash
+npm install superkey @headlessui/react
+```
+
+### 3. Add in remix.config.js:
+
+```js {6}
+/** @type {import('@remix-run/dev').AppConfig} */
+module.exports = {
+  serverBuildTarget: "vercel",
+  server: process.env.NODE_ENV === "development" ? undefined : "./server.js",
+  ignoredRouteFiles: ["**/.*"],
+  serverDependenciesToBundle: ["superkey"],
+  // your other config...
+};
+```
+
+### 4. Add Superkey styles in entry.client.tsx:
+
+```jsx {5}
+import { RemixBrowser } from "@remix-run/react";
+import { startTransition, StrictMode } from "react";
+import { hydrateRoot } from "react-dom/client";
+
+import 'superkey/styles.css';
+
+function hydrate() {
+  startTransition(() => {
+    hydrateRoot(
+      document,
+      <StrictMode>
+        <RemixBrowser />
+      </StrictMode>
+    );
+  });
+}
+
+if (window.requestIdleCallback) {
+  window.requestIdleCallback(hydrate);
+} else {
+  window.setTimeout(hydrate, 1);
+}
+```
+
+### 5. Add Superkey styles in root.tsx:
+
+```jsx {1,11,13-15}
+import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
+
+import styles from "superkey/styles.css";
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: styles }];
+};
+
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "New Remix App",
+  viewport: "width=device-width,initial-scale=1",
+});
+
+export default function App() {
+  return (
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
+  );
+}
+```
+
+### 6. Create component:
+
+```jsx {5-17}
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+function App() {
+  return (
+    <Command open={true}>
+      <CommandInput
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      />
+      <CommandList>
+        <CommandOption value="Option 1">
+          <h1>With Nextjs 🚀</h1>
+          <p>Description</p>
+        </CommandOption>
+      </CommandList>
+    </Command>
+  );
+}
+```
+
+### 7. Run your project:
+
+```bash
+npm run dev
+```
+
+🥳 Ready.
