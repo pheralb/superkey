@@ -29,9 +29,7 @@
 
 | <img src="./web/public/images/other/react.svg" height="26px" alt="React"> | <img src="./web/public/images/other/nextjs.svg" height="26px" alt="Nextjs"> | <img src="./web/public/images/other/remix.svg" height="26px" alt="Remix"> | <img src="./web/public/images/other/solidjs.svg" height="26px" alt="Solidjs"> | <img src="./web/public/images/other/preact.svg" height="26px" alt="Preact"> |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [✅ Vitejs + React](https://vitejs.dev/)                                                                   | [✅ Nextjs 13](https://nextjs.org/)                                                                | [🔨 Remix](https://remix.run/)                                                                  | [🔨 Solidjs](https://www.solidjs.com/)                                                                 | [🔨 Preact](https://preactjs.com/)                                                                       |
-
-> 🔨 We are preparing Superkey to support it.
+| [✅ Vitejs + React](https://vitejs.dev/)                                  | [✅ Nextjs 13](https://nextjs.org/)                                         | [Remix (working)](https://remix.run/)                                            | [Solidjs (working)](https://www.solidjs.com/)                                        | [Preact (working)](https://preactjs.com/)                                          |
 
 ## 🤝 Contributing
 
