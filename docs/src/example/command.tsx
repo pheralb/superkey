@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BsCommand } from "react-icons/bs";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
 // Your json data =>
@@ -33,32 +34,39 @@ const CommandExample = () => {
     : exampleData;
 
   return (
-    <Command
-      open={open}
-      onClose={() => setOpen(false)}
-      afterLeave={() => {
-        setQuery("");
-      }}
-      commandFunction={(fruit) => {
-        setOpen(false);
-      }}
-    >
-      <CommandInput
-        onChange={(e) => {
-          setQuery(e.target.value);
-        }}
+    <>
+      <BsCommand
+        size={20}
+        onClick={() => setOpen(!open)}
+        className="cursor-pointer text-neutral-300 hover:text-neutral-100"
       />
-      <CommandList>
-        {filteredData.map((example) => (
-          <CommandOption key={example.id} value={example.slug}>
-            <div className="flex items-center py-2 space-x-1">
-              <div className="mr-2">{example.icon}</div>
-              <h1 className="text-gray-100">{example.name}</h1>
-            </div>
-          </CommandOption>
-        ))}
-      </CommandList>
-    </Command>
+      <Command
+        open={open}
+        onClose={() => setOpen(false)}
+        afterLeave={() => {
+          setQuery("");
+        }}
+        commandFunction={(fruit) => {
+          setOpen(false);
+        }}
+      >
+        <CommandInput
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+        <CommandList>
+          {filteredData.map((example) => (
+            <CommandOption key={example.id} value={example.slug}>
+              <div className="flex items-center py-2 space-x-1">
+                <div className="mr-2">{example.icon}</div>
+                <h1 className="text-gray-100">{example.name}</h1>
+              </div>
+            </CommandOption>
+          ))}
+        </CommandList>
+      </Command>
+    </>
   );
 };
 
