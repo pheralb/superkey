@@ -1,5 +1,3 @@
-> **Warning**: Superkey is under development and **is not ready for production**.
-
 <div align="center">
 
 <a href="#">
@@ -13,8 +11,6 @@
 <a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-getting-started">Contribute</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-roadmap">Roadmap</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
@@ -25,11 +21,7 @@
 
 ## 👋 Introduction
 
-**Superkey** is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project. Works with:
-
-| <img src="./web/public/images/other/react.svg" height="26px" alt="React"> | <img src="./web/public/images/other/nextjs.svg" height="26px" alt="Nextjs"> | <img src="./web/public/images/other/remix.svg" height="26px" alt="Remix"> | <img src="./web/public/images/other/solidjs.svg" height="26px" alt="Solidjs"> | <img src="./web/public/images/other/preact.svg" height="26px" alt="Preact"> |
-| ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [✅ Vitejs + React](https://vitejs.dev/)                                  | [✅ Nextjs 13](https://nextjs.org/)                                         | [Remix (working)](https://remix.run/)                                            | [Solidjs (working)](https://www.solidjs.com/)                                        | [Preact (working)](https://preactjs.com/)                                          |
+[**Superkey**](https://superkey.vercel.app/) is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
 
 ## 🤝 Contributing
 
@@ -83,9 +75,9 @@ pnpm dev
 
 ### Web
 
-- `Superkey website + documentation` : Built with Nextjs & next-mdx-remote.
+- `Superkey website + docs` : Built with Nextjs & next-mdx-remote.
 
-## 📚 Components props
+## 📚 Props
 
 ### Command
 
