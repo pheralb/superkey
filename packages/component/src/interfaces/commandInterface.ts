@@ -36,4 +36,5 @@ export interface CommandOptionProps {
 // Command List =>
 export interface CommandListProps {
   children: React.ReactNode;
+  className?: string;
 }

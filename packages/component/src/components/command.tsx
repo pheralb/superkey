@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Fragment } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
 import { CommandProps } from "../interfaces/commandInterface";
@@ -22,9 +23,12 @@ const Command = (props: CommandProps) => {
           leaveTo="opacity-0"
         >
           <Dialog.Overlay
-            className={`fixed inset-0 ${
-              props.overlayClassName ? props.overlayClassName : "bg-gray-200/60 dark:bg-zinc-900/60"
-            }`}
+            className={clsx(
+              `fixed inset-0`,
+              props.overlayClassName
+                ? props.overlayClassName
+                : "bg-gray-200/60 dark:bg-zinc-900/60"
+            )}
           />
         </Transition.Child>
         <Transition.Child
@@ -38,9 +42,12 @@ const Command = (props: CommandProps) => {
           <Combobox
             as="div"
             onChange={props.commandFunction}
-            className={`relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1 ${
-              props.className ? props.className : "bg-white ring-black/5 dark:bg-zinc-900 dark:ring-zinc-900/5"
-            }`}
+            className={clsx(
+              `relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1`,
+              props.className
+                ? props.className
+                : "bg-white  dark:bg-zinc-900 dark:ring-zinc-900/5"
+            )}
           >
             {props.children}
           </Combobox>
