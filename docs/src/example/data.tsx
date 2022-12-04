@@ -1,14 +1,5 @@
-import {
-  BiSearch,
-  BiPlus,
-  BiGroup,
-  BiBookOpen,
-  BiMessageSquare,
-  BiMailSend,
-  BiMoon,
-  BiBookmarkAlt,
-} from "react-icons/bi";
-import { BsBox, BsGithub, BsTwitter } from "react-icons/bs";
+import { BiBookOpen, BiBookmarkAlt } from "react-icons/bi";
+import { BsGithub, BsTwitter } from "react-icons/bs";
 
 export const exampleData = [
   {

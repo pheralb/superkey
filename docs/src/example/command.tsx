@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
-import toast from "react-hot-toast";
 
 // Your json data =>
 import { exampleData } from "./data";
-import { useRouter } from "next/router";
 
 const CommandExample = () => {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
-  const router = useRouter();
 
   // Ctrl+k to open command =>
   useEffect(() => {
@@ -44,7 +41,6 @@ const CommandExample = () => {
       }}
       commandFunction={(fruit) => {
         setOpen(false);
-        router.push(`${fruit}`);
       }}
     >
       <CommandInput
@@ -54,13 +50,9 @@ const CommandExample = () => {
       />
       <CommandList>
         {filteredData.map((example) => (
-          <CommandOption
-            key={example.id}
-            value={example.slug}
-            activeClassName="bg-gray-100 dark:bg-zinc-800"
-          >
-            <div className="flex items-center justify-between p-2">
-              <div className="mr-2 icon-size-8">{example.icon}</div>
+          <CommandOption key={example.id} value={example.slug}>
+            <div className="flex items-center py-2 space-x-1">
+              <div className="mr-2">{example.icon}</div>
               <h1 className="text-gray-100">{example.name}</h1>
             </div>
           </CommandOption>
