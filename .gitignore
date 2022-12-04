@@ -9,11 +9,13 @@ pnpm-lock.yaml
 # Testing =>
 coverage
 
-# Next.js =>
+# Remix =>
+/docs/api
 .vscode
-.next/
-out/
+.cache
 build
+/api/index.js
+/api/index.js.map
 
 # Library =>
 dist
@@ -29,6 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Local env files =>
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -38,4 +41,7 @@ yarn-error.log*
 .turbo
 
 # Other =>
+.next
+.vercel
+.output
 .cache
