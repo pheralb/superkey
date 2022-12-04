@@ -1,7 +1,7 @@
 <div align="center">
 
-<a href="#">
-<img src="./web/public/images/banner_gh.jpg" />
+<a href="https://superkey.vercel.app/">
+<img src="./docs/public/img/banner_gh.png" />
 </a>
 
 <p></p>
