@@ -38,7 +38,7 @@ const CommandExample = () => {
       <BsCommand
         size={20}
         onClick={() => setOpen(!open)}
-        className="cursor-pointer text-neutral-300 hover:text-neutral-100"
+        className="cursor-pointer dark:text-neutral-300 hover:text-neutral-600"
       />
       <Command
         open={open}
@@ -60,7 +60,7 @@ const CommandExample = () => {
             <CommandOption key={example.id} value={example.slug}>
               <div className="flex items-center py-2 space-x-1">
                 <div className="mr-2">{example.icon}</div>
-                <h1 className="text-gray-100">{example.name}</h1>
+                <h1>{example.name}</h1>
               </div>
             </CommandOption>
           ))}
