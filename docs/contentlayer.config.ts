@@ -1,9 +1,11 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import highlight from "rehype-prism-plus";
+import remarkGfm from "remark-gfm";
 
 const Content = defineDocumentType(() => ({
   name: "DocContent",
   filePathPattern: `**/*.mdx`,
-  contentType: 'mdx',
+  contentType: "mdx",
   fields: {
     title: {
       type: "string",
@@ -27,4 +29,5 @@ const Content = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "content",
   documentTypes: [Content],
+  mdx: { rehypePlugins: [highlight], remarkPlugins: [remarkGfm] },
 });
