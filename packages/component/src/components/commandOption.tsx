@@ -8,9 +8,9 @@ const CommandOption = (props: CommandOptionProps) => {
       {({ active }) => (
         <div
           className={clsx(
-            "space-x-1 px-4 py-2",
+            "space-x-1 px-4 py-2 cursor-pointer",
             active
-              ? "bg-gray-100 dark:bg-zinc-700/25 duration-200 transition-all" ||
+              ? "bg-gray-100 dark:bg-zinc-700/25" ||
                   props.activeClassName
               : "bg-transparent"
           )}
