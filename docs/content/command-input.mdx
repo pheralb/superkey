@@ -1,0 +1,30 @@
+---
+title: 🎨 CommandInput
+description: Search text field.
+---
+
+### 1. Import:
+
+```jsx
+import { CommandInput } from "superkey";
+```
+
+### 2. Use:
+
+```jsx
+<CommandInput
+  onChange={(e) => {
+    console.log(e);
+  }}
+/>
+```
+
+### 3. Props:
+
+| -   | Prop           | Description                                            | Required     |
+| --- | -------------- | ------------------------------------------------------ | ------------ |
+| ⚙️  | onChange       | Inside it uses the input, list and options components. | **Required** |
+| ⚙️  | searchIcon     | Adds an icon to the search field.                      | Optional     |
+| ⚙️  | placeholder    | Edit the default placeholder                           | Optional     |
+| 🎨  | className      | Edit the styles around the input.                      | Optional     |
+| 🎨  | inputClassName | Edit the default styles of the field.                  | Optional     |

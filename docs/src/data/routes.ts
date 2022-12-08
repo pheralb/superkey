@@ -30,6 +30,10 @@ export const components = [
     title: "CommandOption",
     path: "/docs/command-option",
   },
+  {
+    title: "Default colors",
+    path: "/docs/default-colors",
+  }
 ];
 
 export const examples = [
@@ -44,5 +48,16 @@ export const examples = [
   {
     title: "Vite.js + React + Typescript",
     path: "https://github.com/pheralb/superkey/tree/main/examples/with-vite-react-typescript",
+  },
+];
+
+export const frameworkGuides = [
+  {
+    title: "▲ Next.js",
+    path: "/docs/nextjs",
+  },
+  {
+    title: "📀 Remix",
+    path: "/docs/remix",
   },
 ];
