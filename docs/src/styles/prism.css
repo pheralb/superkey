@@ -33,6 +33,7 @@ pre[class*="language-"] {
 	background: #131314;
 	color: hsl(220, 14%, 71%);
 	font-size: 15px;
+	font-family: Cascadia, monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;

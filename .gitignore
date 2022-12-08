@@ -9,15 +9,14 @@ pnpm-lock.yaml
 # Testing =>
 coverage
 
-# Remix =>
-/docs/api
-.vscode
-.cache
-build
-/api/index.js
-/api/index.js.map
+# Next.js =>
+/.next/
+/out/
+/build
+.contentlayer
 
 # Library =>
+build
 dist
 
 # Misc =>

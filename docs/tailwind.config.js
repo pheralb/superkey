@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -9,7 +9,8 @@ module.exports = {
         mono: ["Cascadia", "monospace"],
       },
       colors: {
-        customDark: "#131314",
+        backgroundDark: "#121212",
+        backgroundLight: "#FFFEFC",
       },
     },
   },

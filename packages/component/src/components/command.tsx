@@ -43,7 +43,7 @@ const Command = (props: CommandProps) => {
             as="div"
             onChange={props.commandFunction}
             className={clsx(
-              `relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl ring-1`,
+              `relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl`,
               props.className
                 ? props.className
                 : "bg-white  dark:bg-zinc-900 dark:ring-zinc-900/5"

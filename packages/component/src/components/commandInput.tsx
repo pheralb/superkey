@@ -20,7 +20,7 @@ const CommandInput = (props: CommandInputProps) => {
           `w-full h-10 pl-2 bg-transparent border-none focus:outline-none`,
           props.inputClassName
             ? props.inputClassName
-            : "text-gray-600 dark:text-gray-200"
+            : "dark:text-neutral-200"
         )}
         placeholder={
           props.placeholder ? props.placeholder : "Type a command or search..."
