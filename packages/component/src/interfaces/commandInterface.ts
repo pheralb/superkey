@@ -21,6 +21,7 @@ export interface CommandInputProps {
   placeholder?: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): void;
   searchIcon?: React.ReactNode;
+  className?: string;
   inputClassName?: string;
 }
 
