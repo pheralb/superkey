@@ -3,7 +3,16 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter-Roman", "sans-serif"],
+        mono: ["Cascadia", "monospace"],
+      },
+      colors: {
+        backgroundDark: "#121212",
+        backgroundLight: "#FFFEFC",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
