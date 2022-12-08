@@ -1,19 +1,37 @@
 import Head from "next/head";
 import { type GetStaticProps } from "next";
+import Link from "next/link";
 
 import { allDocContents, type DocContent } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import { BiEditAlt } from "react-icons/bi";
 
 const DocLayout = ({ doc }: { doc: DocContent }) => {
   const MDXContent = useMDXComponent(doc.body.code);
   return (
     <>
       <Head>
-        <title>{doc.title}</title>
+        <title>{doc.title} - Superkey</title>
       </Head>
-      <article className="max-w-xl py-8 mx-auto">
-        <div className="mb-8 text-center">
-          <h1>{doc.title}</h1>
+      <article className="flex flex-col justify-center max-w-3xl mx-auto mb-6">
+        <div className="flex justify-between pb-4 mt-5 mb-8 border-b border-neutral-800">
+          <div className="flex flex-col space-y-2">
+            <h1 className="text-4xl font-medium">{doc.title}</h1>
+            <p className="text-gray-400">{doc.description}</p>
+          </div>
+          <div className="flex items-center space-x-2">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href={`https://github.com/pheralb/superkey/blob/main/docs/content/${doc.url
+                .split("/")
+                .slice(2)
+                .join("/")}.mdx`}
+              className="text-gray-400 hover:text-gray-300"
+            >
+              <BiEditAlt size={18} />
+            </a>
+          </div>
         </div>
         <div className="prose prose-invert">
           <MDXContent />

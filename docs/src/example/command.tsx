@@ -35,11 +35,12 @@ const CommandExample = () => {
 
   return (
     <>
-      <BsCommand
-        size={20}
+      <button
+        className="p-2 transition-colors duration-100 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800"
         onClick={() => setOpen(!open)}
-        className="cursor-pointer dark:text-neutral-300 hover:text-neutral-600"
-      />
+      >
+        <BsCommand size={20} />
+      </button>
       <Command
         open={open}
         onClose={() => setOpen(false)}
