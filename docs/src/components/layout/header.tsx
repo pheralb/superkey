@@ -27,7 +27,7 @@ const Header = () => {
             <a
               href="https://twitter.com/pheralb_"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noreferrer"
               className="p-2 transition-colors duration-100 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800"
             >
               <BsTwitter size={20} />
@@ -35,7 +35,7 @@ const Header = () => {
             <a
               href="https://github.com/pheralb/superkey"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noreferrer"
               className="p-2 transition-colors duration-100 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800"
             >
               <BsGithub size={20} />
