@@ -32,13 +32,16 @@ const CommandExample = () => {
 
   return (
     <Command
-      open={true}
+      open={open}
       afterLeave={() => {
         setQuery("");
       }}
       commandFunction={(fruit) => {
         setOpen(false);
         alert(`You selected ${fruit}`);
+      }}
+      onClose={() => {
+        setOpen(false);
       }}
     >
       <CommandInput
