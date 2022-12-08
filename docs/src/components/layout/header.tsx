@@ -14,10 +14,10 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full bg-backgroundLight dark:bg-backgroundDark">
-      <div className="container py-4 mx-auto">
+      <div className="container px-5 py-4 mx-auto mt-1 mb-2 md:mb-0 md:px-0">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <div className="flex items-center space-x-3 transition-all duration-150 hover:text-gray-300">
+            <div className="flex items-center space-x-3 transition-all duration-150 dark:hover:text-gray-300 hover:text-gray-500">
               <img src="/img/logo_svg.svg" alt="Logo" className="w-8 h-8" />
               <h3 className="text-xl font-medium">Superkey</h3>
             </div>

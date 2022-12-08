@@ -9,7 +9,7 @@ interface SidebarSectionProps {
 
 const SidebarSection = (props: SidebarSectionProps) => {
   return (
-    <div className={props.border ? `pb-5 border-b border-neutral-800` : ``}>
+    <div className={props.border ? `pb-5 border-b border-neutral-300 dark:border-neutral-800` : ``}>
       <div className="flex items-center mt-4 mb-3">
         <div className="flex items-center space-x-2">
           {props.icon}

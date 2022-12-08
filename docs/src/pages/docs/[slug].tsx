@@ -13,11 +13,11 @@ const DocLayout = ({ doc }: { doc: DocContent }) => {
       <Head>
         <title>{doc.title} - Superkey</title>
       </Head>
-      <article className="flex flex-col justify-center max-w-3xl mx-auto mb-6">
-        <div className="flex justify-between pb-4 mt-5 mb-8 border-b border-neutral-800">
+      <article className="flex flex-col justify-center max-w-3xl px-5 mx-auto mb-6 md:px-0">
+        <div className="flex justify-between pb-4 mt-5 mb-8 border-b border-neutral-300 dark:border-neutral-800">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-4xl font-medium">{doc.title}</h1>
-            <p className="text-gray-400">{doc.description}</p>
+            <h1 className="text-2xl font-medium md:text-4xl">{doc.title}</h1>
+            <p className="text-gray-500 dark:text-gray-400">{doc.description}</p>
           </div>
           <div className="flex items-center space-x-2">
             <a
@@ -27,13 +27,13 @@ const DocLayout = ({ doc }: { doc: DocContent }) => {
                 .split("/")
                 .slice(2)
                 .join("/")}.mdx`}
-              className="text-gray-400 hover:text-gray-300"
+              className="text-gray-400 hover:text-gray-800 dark:hover:text-gray-300"
             >
               <BiEditAlt size={18} />
             </a>
           </div>
         </div>
-        <div className="prose prose-invert">
+        <div className="prose dark:prose-invert">
           <MDXContent />
         </div>
       </article>
