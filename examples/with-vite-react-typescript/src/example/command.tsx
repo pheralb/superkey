@@ -43,6 +43,9 @@ const CommandExample = () => {
         setOpen(false);
         alert(`You selected ${fruit}`);
       }}
+      onClose={() => {
+        setOpen(false);
+      }}
     >
       <CommandInput
         onChange={(e) => {
