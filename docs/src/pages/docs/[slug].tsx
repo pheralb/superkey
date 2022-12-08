@@ -5,6 +5,7 @@ import Link from "next/link";
 import { allDocContents, type DocContent } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { BiEditAlt } from "react-icons/bi";
+import FrameworkGuide from "@/components/frameworkGuide";
 
 const DocLayout = ({ doc }: { doc: DocContent }) => {
   const MDXContent = useMDXComponent(doc.body.code);
@@ -36,7 +37,11 @@ const DocLayout = ({ doc }: { doc: DocContent }) => {
           </div>
         </div>
         <div className="prose dark:prose-invert">
-          <MDXContent />
+          <MDXContent
+            components={{
+              FrameworkGuide,
+            }}
+          />
         </div>
       </article>
     </>
