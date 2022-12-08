@@ -1,6 +1,6 @@
 ---
 title: 🎨 Command
-description: Install Superkey in your project.
+description: Command palette component.
 ---
 
 ### 1. Import:
@@ -23,8 +23,8 @@ import { Command } from "superkey";
 | --- | ---------------- | -------------------------------------------------------- | ------------ |
 | ⚙️  | children         | Inside it uses the input, list and options components.   | **Required** |
 | ⚙️  | open             | Open or close the command palette.                       | **Required** |
+| ⚙️  | onClose          | Function to be executed when close the command palette.  | **Required** |
 | ⚙️  | commandFunction  | Function to be executed when click an option.            | Optional     |
-| ⚙️  | onClose          | Function to be executed when close the command palette.  | Optional     |
 | ⚙️  | afterLeave       | Function to be executed after close the command palette. | Optional     |
 | 🎨  | className        | Class to be added to the command palette.                | Optional     |
 | 🎨  | overlayClassName | Class to be added to the overlay.                        | Optional     |
