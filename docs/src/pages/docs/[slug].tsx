@@ -17,11 +17,13 @@ const DocLayout = ({ doc }: { doc: DocContent }) => {
         <div className="flex justify-between pb-4 mt-5 mb-8 border-b border-neutral-300 dark:border-neutral-800">
           <div className="flex flex-col space-y-2">
             <h1 className="text-2xl font-medium md:text-4xl">{doc.title}</h1>
-            <p className="text-gray-500 dark:text-gray-400">{doc.description}</p>
+            <p className="text-gray-500 dark:text-gray-400">
+              {doc.description}
+            </p>
           </div>
           <div className="flex items-center space-x-2">
             <a
-              rel="noopener noreferrer"
+              rel="noreferrer"
               target="_blank"
               href={`https://github.com/pheralb/superkey/blob/main/docs/content/${doc.url
                 .split("/")

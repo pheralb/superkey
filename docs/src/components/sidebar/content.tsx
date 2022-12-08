@@ -71,7 +71,7 @@ const SidebarContent = (props: Props) => {
           <SidebarSection icon={<BiBox size={18} />} title="Examples">
             {examples.map((item) => (
               <a
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 target="_blank"
                 href={item.path}
                 key={item.path}
