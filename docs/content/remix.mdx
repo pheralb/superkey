@@ -36,7 +36,7 @@ import { RemixBrowser } from "@remix-run/react";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 
-import 'superkey/styles.css';
+import "superkey/styles.css";
 
 function hydrate() {
   startTransition(() => {
@@ -102,11 +102,18 @@ export default function App() {
 ### 6. Create component:
 
 ```jsx {5-17}
+import { useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <Command open={true}>
+    <Command
+      open={open}
+      onClose={() => {
+        setOpen(false);
+      }}
+    >
       <CommandInput
         onChange={(e) => {
           console.log(e.target.value);

@@ -14,7 +14,7 @@ export const exampleData = [
     name: "Examples",
     icon: <BiBookmarkAlt size={18} />,
     command: "examples",
-    slug: "/examples",
+    slug: "https://github.com/pheralb/superkey/tree/main/examples",
   },
   {
     id: 3,
