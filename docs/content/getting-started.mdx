@@ -3,7 +3,7 @@ title: 🚀 Getting Started
 description: Install Superkey in your project.
 ---
 
-Superkey is a stylized command palette component built with React, Tailwind CSS & HeadlessUI ready to be used in your next project. 
+Superkey is a stylized command palette component built with React, Tailwind CSS & HeadlessUI ready to be used in your next project.
 
 ### 🛫 Framework guides:
 
@@ -17,9 +17,9 @@ Superkey is a stylized command palette component built with React, Tailwind CSS 
 npm install superkey @headlessui/react
 # or
 yarn add superkey @headlessui/react
-# or 
+# or
 pnpm install superkey @headlessui/react
-# or 
+# or
 ultra install superkey @headlessui/react
 ```
 
@@ -32,14 +32,23 @@ import "superkey/styles.css";
 ### 3. How to use:
 
 ```jsx {5-19}
+import { useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
 function App() {
+  const [open, setOpen] = useState(false);
   return (
-    <Command open={true}>
-      <CommandInput onChange={(e) => {
-        console.log(e.target.value);
-      }} />
+    <Command
+      open={open}
+      onClose={() => {
+        setOpen(false);
+      }}
+    >
+      <CommandInput
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      />
       <CommandList>
         <CommandOption value="Option 1">
           <h1>Option 1</h1>
