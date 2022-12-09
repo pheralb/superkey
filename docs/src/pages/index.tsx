@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center pt-16">
-          <h2 className="text-5xl font-bold text-gray-800 mb-7 dark:text-gray-200">
+          <h2 className="text-3xl font-bold text-center text-gray-800 md:text-5xl mb-7 dark:text-gray-200">
             A stylized command menu for React
           </h2>
           <div className="flex items-center mb-8 space-x-8">
