@@ -10,7 +10,7 @@
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-getting-started">Contribute</a>
+<a href="#-contributing">Contribute</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
@@ -75,45 +75,7 @@ pnpm dev
 
 ### Web
 
-- `Superkey website + docs` : Built with Nextjs & next-mdx-remote.
-
-## 📚 Props
-
-### Command
-
-| -   | Prop               | Description                                              | Required     |
-| --- | ------------------ | -------------------------------------------------------- | ------------ |
-| ⚙️  | `children`         | Inside it uses the input, list and options components.   | **Required** |
-| ⚙️  | `open`             | Open or close the command palette.                       | **Required** |
-| ⚙️  | `commandFunction`  | Function to be executed when click an option.            | Optional     |
-| ⚙️  | `onClose`          | Function to be executed when close the command palette.  | Optional     |
-| ⚙️  | `afterLeave`       | Function to be executed after close the command palette. | Optional     |
-| 🎨  | `className`        | Class to be added to the command palette.                | Optional     |
-| 🎨  | `overlayClassName` | Class to be added to the overlay.                        | Optional     |
-
-### CommandInput
-
-| -   | Prop             | Description                                          | Type         |
-| --- | ---------------- | ---------------------------------------------------- | ------------ |
-| ⚙️  | `onChange`       | Action when the user types in the search field.      | **Required** |
-| ⚙️  | `placeholder`    | The placeholder of the search text field.            | Optional     |
-| 🎨  | `searchIcon`     | Adds an icon to the search field.                    | Optional     |
-| 🎨  | `className`      | Class to be added to the all component.              | Optional     |
-| 🎨  | `inputClassName` | Class to be added to the input text field component. | Optional     |
-
-### CommandList
-
-| -   | Prop       | Description                    | Type         |
-| --- | ---------- | ------------------------------ | ------------ |
-| ⚙️  | `children` | Inside imports CommandOptions. | **Required** |
-
-### CommandOption
-
-| -   | Prop        | Description                                       | Type         |
-| --- | ----------- | ------------------------------------------------- | ------------ |
-| ⚙️  | `value`     | Value of each option.                             | **Required** |
-| ⚙️  | `children`  | Inside, the option information will be displayed. | **Required** |
-| 🎨  | `className` | Modifies the styles of the option component.      | Optional     |
+- `docs` : Built with Nextjs & Contentlayer.
 
 ## 🔑 License
 
