@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { BsCommand } from "react-icons/bs";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
@@ -8,6 +9,7 @@ import { exampleData } from "./data";
 const CommandExample = () => {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   // Ctrl+k to open command =>
   useEffect(() => {
@@ -47,7 +49,8 @@ const CommandExample = () => {
         afterLeave={() => {
           setQuery("");
         }}
-        commandFunction={(fruit) => {
+        commandFunction={(data) => {
+          router.push(`${data}`);
           setOpen(false);
         }}
       >
