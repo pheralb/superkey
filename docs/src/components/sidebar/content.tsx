@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
-import { examples, components, introduction } from "@/data/routes";
-import { BiBox, BiPalette, BiSearch, BiWorld } from "react-icons/bi";
+import { examples, components, introduction, theming } from "@/data/routes";
+import { BiBox, BiPaint, BiPalette, BiWorld } from "react-icons/bi";
+import { IoClose, IoSearch } from "react-icons/io5";
+
 import SidebarLink from "./link";
 import SidebarSection from "./section";
 
@@ -17,16 +19,25 @@ const SidebarContent = (props: Props) => {
 
   return (
     <>
-      <input
-        type="text"
-        onChange={handleSearch}
-        value={search}
-        placeholder="Search..."
-        className="w-full px-4 py-2 mt-3 mb-2 text-sm bg-gray-100 border rounded-md dark:bg-neutral-900 dark:text-neutral-100 ring-0 focus:ring-0 focus:outline-none border-neutral-300 dark:border-neutral-800"
-      />
+      <div className="flex items-center">
+        <input
+          type="text"
+          onChange={handleSearch}
+          value={search}
+          placeholder="Search..."
+          className="w-full px-4 py-2 mt-3 mb-2 text-sm bg-gray-100 border rounded-md dark:bg-neutral-900 dark:text-neutral-100 ring-0 focus:ring-0 focus:outline-none border-neutral-300 dark:border-neutral-800"
+        />
+        {search.length > 0 && (
+          <IoClose
+            size={18}
+            onClick={() => setSearch("")}
+            className="absolute right-0 mt-1 mr-3 text-gray-400 duration-200 cursor-pointer hover:text-gray-800 dark:hover:text-gray-300"
+          />
+        )}
+      </div>
       {search.length > 0 ? (
         <>
-          <SidebarSection icon={<BiSearch size={18} />} title="Search results:">
+          <SidebarSection title="Search results:" icon={<IoSearch size={18} />}>
             {allLinks.map((item) => {
               if (item.title.toLowerCase().includes(search.toLowerCase())) {
                 return (
@@ -61,6 +72,19 @@ const SidebarContent = (props: Props) => {
             border={true}
           >
             {components.map((item) => (
+              <SidebarLink
+                key={item.path}
+                path={item.path}
+                title={item.title}
+              />
+            ))}
+          </SidebarSection>
+          <SidebarSection
+            icon={<BiPaint size={18} />}
+            title="Theme"
+            border={true}
+          >
+            {theming.map((item) => (
               <SidebarLink
                 key={item.path}
                 path={item.path}
