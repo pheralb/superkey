@@ -1,7 +1,7 @@
 import React from "react";
 
 interface SidebarSectionProps {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   title: string;
   children: React.ReactNode;
   border?: boolean;

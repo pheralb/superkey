@@ -36,7 +36,7 @@ const DocLayout = ({ doc }: { doc: DocContent }) => {
             </a>
           </div>
         </div>
-        <div className="prose dark:prose-invert">
+        <div className="prose dark:prose-invert max-w-none">
           <MDXContent
             components={{
               FrameworkGuide,

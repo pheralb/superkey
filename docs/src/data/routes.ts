@@ -30,10 +30,13 @@ export const components = [
     title: "CommandOption",
     path: "/docs/command-option",
   },
+];
+
+export const theming = [
   {
     title: "Default colors",
     path: "/docs/default-colors",
-  }
+  },
 ];
 
 export const examples = [
