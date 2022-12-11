@@ -2,29 +2,29 @@ import clsx from "clsx";
 import { Combobox } from "@headlessui/react";
 import { CommandInputProps } from "../interfaces/commandInterface";
 
-const CommandInput = (props: CommandInputProps) => {
+const CommandInput = ({
+  className,
+  searchIcon,
+  onChange,
+  inputClassName,
+  placeholder
+}: CommandInputProps) => {
   return (
     <div
       className={clsx(
         `flex items-center p-2 space-x-2`,
-        props.className
-          ? props.className
-          : ""
+        className ?? ""
       )}
     >
-      {props.searchIcon}
+      {searchIcon}
       <Combobox.Input
         as="input"
-        onChange={props.onChange}
+        onChange={onChange}
         className={clsx(
           `w-full h-10 pl-2 bg-transparent border-none focus:outline-none`,
-          props.inputClassName
-            ? props.inputClassName
-            : "dark:text-neutral-200"
+          inputClassName ?? "dark:text-neutral-200"
         )}
-        placeholder={
-          props.placeholder ? props.placeholder : "Type a command or search..."
-        }
+        placeholder={ placeholder ?? "Type a command or search..." }
       />
     </div>
   );
