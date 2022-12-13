@@ -6,11 +6,11 @@
 
 <p></p>
 
-<a href="https://superkey.vercel.app/docs/getting-started">Getting Started</a>
+<a href="https://superkey.vercel.app/docs/getting-started">👨‍🚀 Getting Started</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
+<a href="https://github.com/pheralb/superkey/tree/main/examples">🔎 Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-contributing">Contribute</a>
+<a href="#-contributing">✌ Contribute</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
@@ -22,6 +22,28 @@
 ## 👋 Introduction
 
 [**Superkey**](https://superkey.vercel.app/) is a stylized command palette component built with [React](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/) ready to be used in your next project.
+
+## ✨ Features
+
+- ✅ **Easy to install**.
+- ✅ **Support for keyboard navigation**.
+- ✅ **Fully customizable**.
+- ✅ **Fully tested, typed and reliable**.
+
+## 🔧 Installation
+
+```bash
+# npm:
+npm install superkey @headlessui/react
+# yarn:
+yarn add superkey @headlessui/react
+# pnpm:
+pnpm install superkey @headlessui/react
+# ultra:
+ultra install superkey @headlessui/react
+```
+
+📚 **Docs with guides**: [click here](https://superkey.vercel.app/docs/getting-started).
 
 ## 🤝 Contributing
 
@@ -57,7 +79,7 @@ pnpm dev
 
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see app.
 
-## 📦 Monorepo structure:
+## 📦 Monorepo structure
 
 ### Examples:
 
