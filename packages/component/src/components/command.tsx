@@ -3,15 +3,23 @@ import { Fragment } from "react";
 import { Dialog, Combobox, Transition } from "@headlessui/react";
 import { CommandProps } from "../interfaces/commandInterface";
 
-const Command = (props: CommandProps) => {
+const Command = ({ 
+  open, 
+  afterLeave, 
+  onClose,
+  overlayClassName,
+  commandFunction,
+  className,
+  children
+}: CommandProps) => {
   return (
     <Transition.Root
-      show={props.open}
+      show={open}
       as={Fragment}
-      afterLeave={props.afterLeave}
+      afterLeave={afterLeave}
     >
       <Dialog
-        onClose={props.onClose}
+        onClose={onClose}
         className="fixed inset-0 p-5 pt-[25vh] overflow-y-auto"
       >
         <Transition.Child
@@ -25,9 +33,7 @@ const Command = (props: CommandProps) => {
           <Dialog.Overlay
             className={clsx(
               `fixed inset-0`,
-              props.overlayClassName
-                ? props.overlayClassName
-                : "bg-gray-200/60 dark:bg-zinc-900/60"
+              overlayClassName ?? "bg-gray-200/60 dark:bg-zinc-900/60"
             )}
           />
         </Transition.Child>
@@ -41,15 +47,13 @@ const Command = (props: CommandProps) => {
         >
           <Combobox
             as="div"
-            onChange={props.commandFunction}
+            onChange={commandFunction}
             className={clsx(
               `relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl`,
-              props.className
-                ? props.className
-                : "bg-white  dark:bg-zinc-900 dark:ring-zinc-900/5"
+              className ?? "bg-white  dark:bg-zinc-900 dark:ring-zinc-900/5"
             )}
           >
-            {props.children}
+            {children}
           </Combobox>
         </Transition.Child>
       </Dialog>
