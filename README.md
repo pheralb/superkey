@@ -6,11 +6,11 @@
 
 <p></p>
 
-<a href="https://superkey.vercel.app/docs/getting-started">👨‍🚀 Getting Started</a>
+<a href="https://superkey.vercel.app/docs/getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://github.com/pheralb/superkey/tree/main/examples">🔎 Examples</a>
+<a href="https://github.com/pheralb/superkey/tree/main/examples">Examples</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-contributing">✌ Contribute</a>
+<a href="#-contributing">Contribute</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
