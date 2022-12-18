@@ -13,9 +13,7 @@ const CommandOption = ({
         <div
           className={clsx(
             "space-x-1 px-4 py-2 cursor-pointer",
-            isActive
-              ? "bg-gray-100 dark:bg-zinc-700/25" ?? activeClassName
-              : "bg-transparent"
+            isActive ? activeClassName : "bg-transparent"
           )}
         >
           {children}
