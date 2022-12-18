@@ -61,7 +61,11 @@ const CommandExample = () => {
         />
         <CommandList>
           {filteredData.map((example) => (
-            <CommandOption key={example.id} value={example.slug}>
+            <CommandOption
+              key={example.id}
+              value={example.slug}
+              activeClassName="bg-gray-100 dark:bg-zinc-700/25"
+            >
               <div className="flex items-center py-2 space-x-1">
                 <div className="mr-2">{example.icon}</div>
                 <h1>{example.name}</h1>
