@@ -17,14 +17,31 @@ import { Command } from "superkey";
 </Command>
 ```
 
-### 3. Props:
+### ⚙️ Props:
 
-| -   | Prop             | Description                                              | Required     |
-| --- | ---------------- | -------------------------------------------------------- | ------------ |
-| ⚙️  | children         | Inside it uses the input, list and options components.   | **Required** |
-| ⚙️  | open             | Open or close the command palette.                       | **Required** |
-| ⚙️  | onClose          | Function to be executed when close the command palette.  | **Required** |
-| ⚙️  | commandFunction  | Function to be executed when click an option.            | Optional     |
-| ⚙️  | afterLeave       | Function to be executed after close the command palette. | Optional     |
-| 🎨  | className        | Class to be added to the command palette.                | Optional     |
-| 🎨  | overlayClassName | Class to be added to the overlay.                        | Optional     |
+| Prop             | Description                                              | Required |
+| ---------------- | -------------------------------------------------------- | -------- |
+| children         | Inside it uses the input, list and options components.   | ✅       |
+| open             | Open or close the command palette.                       | ✅       |
+| onClose          | Function to be executed when close the command palette.  | ✅       |
+| commandFunction  | Function to be executed when click an option.            | -        |
+| afterLeave       | Function to be executed after close the command palette. | -        |
+| className        | Class to be added to the command palette.                | -        |
+| overlayClassName | Class to be added to the overlay.                        | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandProps extends SharedCommandProps {
+  children: React.ReactNode;
+  open: boolean;
+  overlayClassName?: string;
+  commandFunction?: FormEventHandler<HTMLFormElement> | (() => void);
+  onClose: (value: boolean) => void;
+  afterLeave?: () => void;
+}
+```

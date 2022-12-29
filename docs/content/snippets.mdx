@@ -1,0 +1,104 @@
+---
+title: 📦 Snippets
+description: Here you will find snippets to use Superkey in your applications.
+---
+
+### ⚙️ Get the value of the option and pass it to the command component:
+
+```jsx {12,24,32}
+import { useState } from "react";
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+const MyCommand = () => {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+
+  const myData = [
+    {
+      id: 1,
+      name: "Getting Started",
+      data: "This is the data for the command component",
+    },
+  ];
+
+  return (
+    <Command
+      open={open}
+      onClose={() => setOpen(false)}
+      afterLeave={() => {
+        setQuery("");
+      }}
+      commandFunction={(value) => {
+        alert(value);
+      }}
+    >
+      {...}
+      <CommandList>
+        {myData.map((example) => (
+          <CommandOption
+            key={example.id}
+            value={example.data}
+            activeClassName="bg-gray-100 dark:bg-zinc-700/25"
+          >
+            <p>
+              {example.name} {example.icon}
+            </p>
+          </CommandOption>
+        ))}
+      </CommandList>
+    </Command>
+  );
+};
+
+export default MyCommand;
+```
+
+### ⚙️ Run a function & close the command palette:
+
+```jsx {12,24,32}
+import { useState } from "react";
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+const MyCommand = () => {
+  const [open, setOpen] = useState(true);
+  const [query, setQuery] = useState("");
+
+  const myData = [
+    {
+      id: 1,
+      name: "Getting Started",
+      action: () => alert("Hello World!"),
+    },
+  ];
+
+  return (
+    <Command
+      open={open}
+      onClose={() => setOpen(false)}
+      afterLeave={() => {
+        setQuery("");
+      }}
+      commandFunction={() => {
+        setOpen(false);
+      }}
+    >
+      {...}
+      <CommandList>
+        {myData.map((example) => (
+          <CommandOption
+            key={example.id}
+            value={example.action}
+            activeClassName="bg-gray-100 dark:bg-zinc-700/25"
+          >
+            <p>
+              {example.name} {example.icon}
+            </p>
+          </CommandOption>
+        ))}
+      </CommandList>
+    </Command>
+  );
+};
+
+export default MyCommand;
+```

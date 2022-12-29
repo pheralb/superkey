@@ -1,40 +1,36 @@
-export interface CommandData {
-  id: number;
-  name: string;
-  description: string;
-  url?: string;
+import { FormEventHandler } from "react";
+
+// Shared Interface =>
+export interface SharedCommandProps {
+  className?: string;
 }
 
-// Global Command Props =>
-export interface CommandProps {
+// Command Props =>
+export interface CommandProps extends SharedCommandProps {
   children: React.ReactNode;
   open: boolean;
-  className?: string;
   overlayClassName?: string;
-  commandFunction?: (command: CommandData) => void;
+  commandFunction?: FormEventHandler<HTMLFormElement> | (() => void);
   onClose: (value: boolean) => void;
   afterLeave?: () => void;
 }
 
 // Command Input =>
-export interface CommandInputProps {
+export interface CommandInputProps extends SharedCommandProps {
   placeholder?: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): void;
-  searchIcon?: React.ReactNode;
-  className?: string;
+  icon?: React.ReactNode;
   inputClassName?: string;
 }
 
 // Command Option =>
-export interface CommandOptionProps {
-  value: string;
-  className?: string;
+export interface CommandOptionProps extends SharedCommandProps {
+  value: string | (() => void);
   activeClassName?: string;
   children: React.ReactNode;
 }
 
 // Command List =>
-export interface CommandListProps {
+export interface CommandListProps extends SharedCommandProps {
   children: React.ReactNode;
-  className?: string;
 }

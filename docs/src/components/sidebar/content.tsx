@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
-import { examples, components, introduction, theming } from "@/data/routes";
-import { BiBox, BiPaint, BiPalette, BiWorld } from "react-icons/bi";
+import { examples, components, introduction, theming, appsUsingSuperkey } from "@/data/routes";
+import {
+  BiBox,
+  BiHeartCircle,
+  BiLinkExternal,
+  BiPaint,
+  BiPalette,
+  BiWorld,
+} from "react-icons/bi";
 import { IoClose, IoSearch } from "react-icons/io5";
 
 import SidebarLink from "./link";
@@ -92,16 +99,31 @@ const SidebarContent = (props: Props) => {
               />
             ))}
           </SidebarSection>
-          <SidebarSection icon={<BiBox size={18} />} title="Examples">
+          <SidebarSection icon={<BiBox size={18} />} title="Examples" border={true}>
             {examples.map((item) => (
               <a
                 rel="noreferrer"
                 target="_blank"
                 href={item.path}
                 key={item.path}
-                className="py-1 pl-5 text-sm font-medium text-gray-500 transition-all duration-150 border-l border-neutral-300 dark:border-neutral-800 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                className="flex items-center py-1 pl-5 text-sm font-medium text-gray-500 transition-all duration-150 border-l border-neutral-300 dark:border-neutral-800 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               >
                 {item.title}
+                <BiLinkExternal size={10} className="ml-2" />
+              </a>
+            ))}
+          </SidebarSection>
+          <SidebarSection icon={<BiHeartCircle size={18} />} title="Showcase">
+            {appsUsingSuperkey.map((item) => (
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={item.path}
+                key={item.path}
+                className="flex items-center py-1 pl-5 text-sm font-medium text-gray-500 transition-all duration-150 border-l border-neutral-300 dark:border-neutral-800 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+              >
+                {item.title}
+                <BiLinkExternal size={10} className="ml-2" />
               </a>
             ))}
           </SidebarSection>

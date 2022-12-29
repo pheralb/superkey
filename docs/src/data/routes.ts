@@ -11,6 +11,10 @@ export const introduction = [
     title: "Usage with Remix",
     path: "/docs/remix",
   },
+  {
+    title: "Snippets",
+    path: "/docs/snippets",
+  }
 ];
 
 export const components = [
@@ -62,5 +66,12 @@ export const frameworkGuides = [
   {
     title: "📀 Remix",
     path: "/docs/remix",
+  },
+];
+
+export const appsUsingSuperkey = [
+  {
+    title: "Slug - URL Shortener",
+    path: "https://slug.vercel.app/",
   },
 ];

@@ -10,8 +10,6 @@ const SidebarLink = (props: SidebarLinkProps) => {
   const router = useRouter();
   const query = router.query;
   const slug = query.slug;
-
-  console.log(slug);
   return (
     <Link
       href={props.path}
