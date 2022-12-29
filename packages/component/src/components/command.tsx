@@ -50,7 +50,7 @@ const Command = ({
             onChange={commandFunction}
             className={clsx(
               `relative max-w-xl mx-auto overflow-hidden rounded-md shadow-2xl`,
-              className ?? "bg-white  dark:bg-zinc-900 dark:ring-zinc-900/5"
+              className ?? "bg-white dark:bg-zinc-900 dark:ring-zinc-900/5 border border-neutral-300 dark:border-neutral-800"
             )}
           >
             {children}
