@@ -19,12 +19,27 @@ import { CommandInput } from "superkey";
 />
 ```
 
-### 3. Props:
+### ⚙️ Props:
 
-| -   | Prop           | Description                                            | Required     |
-| --- | -------------- | ------------------------------------------------------ | ------------ |
-| ⚙️  | onChange       | Inside it uses the input, list and options components. | **Required** |
-| ⚙️  | searchIcon     | Adds an icon to the search field.                      | Optional     |
-| ⚙️  | placeholder    | Edit the default placeholder                           | Optional     |
-| 🎨  | className      | Edit the styles around the input.                      | Optional     |
-| 🎨  | inputClassName | Edit the default styles of the field.                  | Optional     |
+| Prop           | Description                                            | Required |
+| -------------- | ------------------------------------------------------ | -------- |
+| onChange       | Inside it uses the input, list and options components. | ✅       |
+| icon           | Adds an icon to the search field.                      | -        |
+| placeholder    | Edit the default placeholder                           | -        |
+| className      | Edit the styles around the input.                      | -        |
+| inputClassName | Edit the default styles of the field.                  | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandInputProps extends SharedCommandProps {
+  placeholder?: string;
+  onChange(event: React.ChangeEvent<HTMLInputElement>): void;
+  icon?: React.ReactNode;
+  inputClassName?: string;
+}
+```

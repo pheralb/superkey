@@ -17,11 +17,25 @@ import { CommandOption } from "superkey";
 </CommandOption>
 ```
 
-### 3. Props:
+### ⚙️ Props:
 
-| -   | Prop            | Description                           | Required     |
-| --- | --------------- | ------------------------------------- | ------------ |
-| ⚙️  | value           | The value of the option.              | **Required** |
-| ⚙️  | children        | Option content.                       | **Required** |
-| 🎨  | className       | Edit the styles of the option.        | Optional     |
-| 🎨  | activeClassName | Edit the active styles of the option. | Optional     |
+| Prop            | Description                           | Required |
+| --------------- | ------------------------------------- | -------- |
+| value           | The value of the option.              | ✅       |
+| children        | Option content.                       | ✅       |
+| className       | Edit the styles of the option.        | -        |
+| activeClassName | Edit the active styles of the option. | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandOptionProps extends SharedCommandProps {
+  value: string | (() => void);
+  activeClassName?: string;
+  children: React.ReactNode;
+}
+```

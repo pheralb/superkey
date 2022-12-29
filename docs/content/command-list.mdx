@@ -15,9 +15,21 @@ import { CommandList } from "superkey";
 <CommandList>{/* Here your CommandOption */}</CommandList>
 ```
 
-### 3. Props:
+### ⚙️ Props:
 
-| -   | Prop      | Description                              | Required     |
-| --- | --------- | ---------------------------------------- | ------------ |
-| ⚙️  | children  | Inside it uses CommandOption components. | **Required** |
-| 🎨  | className | Edit the default styles.                 | Optional     |
+| Prop      | Description                              | Required |
+| --------- | ---------------------------------------- | -------- |
+| children  | Inside it uses CommandOption components. | ✅       |
+| className | Edit the default styles.                 | -        |
+
+### ⚙️ Interface:
+
+```ts
+export interface SharedCommandProps {
+  className?: string;
+}
+
+export interface CommandListProps extends SharedCommandProps {
+  children: React.ReactNode;
+}
+```
