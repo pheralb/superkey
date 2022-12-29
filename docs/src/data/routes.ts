@@ -64,3 +64,10 @@ export const frameworkGuides = [
     path: "/docs/remix",
   },
 ];
+
+export const appsUsingSuperkey = [
+  {
+    title: "Slug - URL Shortener",
+    path: "https://slug.vercel.app/",
+  },
+];
