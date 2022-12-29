@@ -1,3 +1,5 @@
+import { FormEventHandler } from "react";
+
 // Shared Interface =>
 export interface SharedCommandProps {
   className?: string;
@@ -8,7 +10,7 @@ export interface CommandProps extends SharedCommandProps {
   children: React.ReactNode;
   open: boolean;
   overlayClassName?: string;
-  commandFunction?: () => void | string;
+  commandFunction?: FormEventHandler<HTMLFormElement> | (() => void);
   onClose: (value: boolean) => void;
   afterLeave?: () => void;
 }
