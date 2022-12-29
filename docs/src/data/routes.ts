@@ -11,6 +11,10 @@ export const introduction = [
     title: "Usage with Remix",
     path: "/docs/remix",
   },
+  {
+    title: "Snippets",
+    path: "/docs/snippets",
+  }
 ];
 
 export const components = [
