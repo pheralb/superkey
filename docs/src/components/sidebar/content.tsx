@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 
-import { examples, components, introduction, theming, appsUsingSuperkey } from "@/data/routes";
+import {
+  examples,
+  components,
+  introduction,
+  theming,
+  appsUsingSuperkey,
+} from "@/data/routes";
+
 import {
   BiBox,
   BiHeartCircle,
@@ -9,16 +16,19 @@ import {
   BiPalette,
   BiWorld,
 } from "react-icons/bi";
-import { IoClose, IoSearch } from "react-icons/io5";
 
+import { IoClose, IoSearch } from "react-icons/io5";
 import SidebarLink from "./link";
 import SidebarSection from "./section";
 
-type Props = {};
-
-const SidebarContent = (props: Props) => {
+const SidebarContent = () => {
   const [search, setSearch] = useState<string>("");
-  const allLinks = [...introduction, ...components, ...examples];
+  const allLinks = [
+    ...introduction,
+    ...components,
+    ...examples,
+    ...appsUsingSuperkey,
+  ];
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -63,7 +73,7 @@ const SidebarContent = (props: Props) => {
           <SidebarSection
             icon={<BiWorld size={18} />}
             title="Introduction"
-            border={true}
+            border={false}
           >
             {introduction.map((item) => (
               <SidebarLink
@@ -76,7 +86,7 @@ const SidebarContent = (props: Props) => {
           <SidebarSection
             icon={<BiPalette size={18} />}
             title="Components"
-            border={true}
+            border={false}
           >
             {components.map((item) => (
               <SidebarLink
@@ -89,7 +99,7 @@ const SidebarContent = (props: Props) => {
           <SidebarSection
             icon={<BiPaint size={18} />}
             title="Theme"
-            border={true}
+            border={false}
           >
             {theming.map((item) => (
               <SidebarLink
@@ -99,7 +109,11 @@ const SidebarContent = (props: Props) => {
               />
             ))}
           </SidebarSection>
-          <SidebarSection icon={<BiBox size={18} />} title="Examples" border={true}>
+          <SidebarSection
+            icon={<BiBox size={18} />}
+            title="Examples"
+            border={false}
+          >
             {examples.map((item) => (
               <a
                 rel="noreferrer"
@@ -113,7 +127,11 @@ const SidebarContent = (props: Props) => {
               </a>
             ))}
           </SidebarSection>
-          <SidebarSection icon={<BiHeartCircle size={18} />} title="Showcase">
+          <SidebarSection
+            icon={<BiHeartCircle size={18} />}
+            title="Showcase"
+            border={false}
+          >
             {appsUsingSuperkey.map((item) => (
               <a
                 rel="noreferrer"
