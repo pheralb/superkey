@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
@@ -18,7 +19,13 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center space-x-3 transition-all duration-150 dark:hover:text-gray-300 hover:text-gray-500">
-              <img src="/img/logo_svg.svg" alt="Logo" className="w-8 h-8" />
+              <Image
+                src="/img/logo_svg.svg"
+                alt="Logo"
+                width={32}
+                height={32}
+                title="Logo"
+              />
               <h3 className="text-xl font-medium">Superkey</h3>
             </div>
           </Link>
