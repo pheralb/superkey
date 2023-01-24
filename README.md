@@ -12,6 +12,7 @@
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="#-contributing">Contribute</a>
 
+![Superkey Minzip Package Size](https://img.shields.io/bundlephobia/minzip/superkey)
 ![GitHub releases](https://img.shields.io/github/release/pheralb/superkey)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/superkey)
 ![GitHub issues](https://img.shields.io/github/issues/pheralb/superkey)
