@@ -31,30 +31,76 @@
 - ✅ **Fully customizable**.
 - ✅ **Fully tested, typed and reliable**.
 
-## 🔧 Installation
+## 👨‍🚀 Getting Started
+
+1. **Install Superkey:**
 
 ```bash
-# npm:
+# with npm:
 npm install superkey @headlessui/react
-# yarn:
+
+# with yarn:
 yarn add superkey @headlessui/react
-# pnpm:
+
+# with pnpm:
 pnpm install superkey @headlessui/react
-# ultra:
+
+# with ultra:
 ultra install superkey @headlessui/react
 ```
 
-📚 **Docs with guides**: [click here](https://superkey.vercel.app/docs/getting-started).
+2. **Add styles:**
+
+```jsx
+import "superkey/styles.css";
+```
+
+3. Create your first command palette component:
+
+```jsx
+import { useState } from "react";
+import { Command, CommandInput, CommandList, CommandOption } from "superkey";
+
+function App() {
+  const [open, setOpen] = useState(false);
+  return (
+    <Command
+      open={open}
+      onClose={() => {
+        setOpen(false);
+      }}
+    >
+      <CommandInput
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      />
+      <CommandList>
+        <CommandOption value="Option 1">
+          <h1>Option 1</h1>
+          <p>Description</p>
+        </CommandOption>
+        <CommandOption value="Option 2">
+          <h1>Option 2</h1>
+          <p>Description</p>
+        </CommandOption>
+      </CommandList>
+    </Command>
+  );
+}
+```
+
+- 📚 [All docs here](https://superkey.vercel.app/docs/getting-started).
 
 ## 🤝 Contributing
 
-### 1. [Fork](https://github.com/pheralb/superkey/fork) and clone the repository:
+1. [Fork](https://github.com/pheralb/superkey/fork) and clone the repository:
 
 ```bash
 git clone git@github.com:your-username/superkey.git
 ```
 
-### 2. Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
@@ -66,7 +112,7 @@ ultra install
 pnpm install
 ```
 
-### 3. Run monorepo:
+3. Run [turborepo](https://turbo.build/repo):
 
 ```bash
 npm run dev
@@ -80,25 +126,12 @@ pnpm dev
 
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see app.
 
-## 📦 Monorepo structure
+## 🔧 Stack
 
-### Examples:
-
-- A list with examples of how to use Superkey.
-
-### Packages:
-
-- `component` : The Superkey component. Using [Tailwind CSS](https://tailwindcss.com/) & [HeadlessUI](https://headlessui.com/).
-
-- `eslint-config-custom` : Shared ESLint configuration for Superkey.
-
-- `tailwind-config` : Shared Tailwind CSS configuration for Superkey.
-
-- `tsconfig` : Shared TypeScript configuration for Superkey.
-
-### Web
-
-- `docs` : Built with Nextjs & Contentlayer.
+- [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [Headless UI](https://headlessui.com/) - Completely unstyled, fully accessible UI components.
+- [Next.js + Contentlayer](https://www.contentlayer.dev/) - Content made easy for developers.
+- [SWC](https://swc.rs/) - Rust-based platform for the Web.
 
 ## 🔑 License
 
