@@ -9,6 +9,7 @@ description: Install Superkey in a Next.js project.
 npx create-next-app@latest --ts
 cd your-project
 ```
+🎉 Superkey is also compatible with [app directory](https://github.com/pheralb/superkey/tree/main/examples/with-next-13-app-directory).
 
 ### 2. Install Superkey:
 
@@ -34,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 import { useState } from "react";
 import { Command, CommandInput, CommandList, CommandOption } from "superkey";
 
-function App() {
+export default function CommandPalette() {
   const [open, setOpen] = useState(false);
   return (
     <Command

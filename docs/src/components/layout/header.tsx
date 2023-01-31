@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <div className="sticky top-0 flex items-center justify-between w-full bg-backgroundLight dark:bg-backgroundDark">
-      <div className="container px-5 py-4 mx-auto mt-1 mb-2 md:mb-0 md:px-0">
+    <div className="sticky top-0 flex items-center justify-between w-full border-t-4 border-neutral-800 bg-backgroundLight dark:bg-backgroundDark opacity-90">
+      <div className="container px-5 py-5 mx-auto mt-1 mb-2 md:mb-0 md:px-0">
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center space-x-3 transition-all duration-150 dark:hover:text-gray-300 hover:text-gray-500">
@@ -27,6 +27,7 @@ const Header = () => {
                 title="Logo"
               />
               <h3 className="text-xl font-medium">Superkey</h3>
+              <span className="text-sm font-bold dark:text-neutral-600 text-neutral-500">0.2.1</span>
             </div>
           </Link>
           <div className="flex items-center space-x-2">

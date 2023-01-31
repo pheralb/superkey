@@ -14,7 +14,7 @@ export const introduction = [
   {
     title: "Snippets",
     path: "/docs/snippets",
-  }
+  },
 ];
 
 export const components = [
@@ -45,7 +45,11 @@ export const theming = [
 
 export const examples = [
   {
-    title: "Next.js + Typescript",
+    title: "Next.js 13 - /app directory",
+    path: "https://github.com/pheralb/superkey/tree/main/examples/with-next-13-app-directory",
+  },
+  {
+    title: "Next.js 13 - /pages directory",
     path: "https://github.com/pheralb/superkey/blob/main/docs/src/example/command.tsx",
   },
   {
