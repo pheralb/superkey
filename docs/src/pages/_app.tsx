@@ -11,6 +11,7 @@ import { DefaultSeo } from "next-seo";
 import nextSeoConfig from "next-seo.config";
 
 // Layout =>
+import NextNProgress from "nextjs-progressbar";
 import Header from "@/components/layout/header";
 import Sidebar from "@/components/layout/sidebar";
 
@@ -19,6 +20,13 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo {...nextSeoConfig} />
       <ThemeProvider attribute="class">
+        <NextNProgress
+          color="#4338ca"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          showOnShallow={true}
+        />
         <Header />
         <Sidebar>
           <Component {...pageProps} />
