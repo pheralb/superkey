@@ -1,6 +1,6 @@
 {
   "name": "superkey",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "@pheralb_",
   "description": "A stylized command menu for React.",
   "type": "module",
@@ -30,6 +30,7 @@
     "@types/react-dom": "18.0.10",
     "chokidar": "3.5.3",
     "concurrently": "7.6.0",
+    "clsx": "1.2.1",
     "eslint": "8.33.0",
     "eslint-config-custom": "*",
     "react": "18.2.0",
@@ -44,8 +45,5 @@
     "@headlessui/react": ">=1.6.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
-  },
-  "dependencies": {
-    "clsx": "1.2.1"
   }
 }
