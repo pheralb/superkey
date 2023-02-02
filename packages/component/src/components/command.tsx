@@ -20,7 +20,7 @@ const Command = ({
     >
       <Dialog
         onClose={onClose}
-        className="fixed inset-0 p-5 pt-[25vh] overflow-y-auto w-screen h-screen"
+        className="fixed inset-0 p-5 pt-[25vh] overflow-y-auto mx-auto max-w-xl h-screen"
       >
         <Transition.Child
           enter="ease-out duration-300"
