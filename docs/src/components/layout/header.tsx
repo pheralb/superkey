@@ -27,7 +27,7 @@ const Header = () => {
                 title="Logo"
               />
               <h3 className="text-xl font-medium">Superkey</h3>
-              <span className="text-sm font-bold dark:text-neutral-600 text-neutral-500">0.2.1</span>
+              <span className="text-sm font-bold dark:text-neutral-600 text-neutral-500">0.2.2</span>
             </div>
           </Link>
           <div className="flex items-center space-x-2">
